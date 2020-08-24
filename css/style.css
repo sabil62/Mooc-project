@@ -1,0 +1,155 @@
+body {
+  background-image: url("./images/HCI/0mooc.png");
+  /* ./images/HCI/Main front.png */
+  background-size: cover;
+  background-color: rgb(238, 255, 255);
+}
+.container-large-css {
+  width: 90%;
+  margin: auto;
+}
+.wrapper-css {
+  background-color: rgb(255, 255, 247);
+  border-top: 3px solid #108cac;
+  margin-top: 36px;
+}
+/* the change in top namebox css can be changed ------------------------------------------------------------*/
+/* these are modes */
+.bg-box-light-mode {
+  background-color: #f4f4f4;
+}
+.bg-sidebox-light-mode {
+  background-color: #e5e5e5;
+}
+.text-color-box-light {
+  color: #8b8b8b;
+  font-size: 13.2px;
+  font-weight: 500;
+}
+.text-color-middle-light {
+  color: #838181;
+  font-size: 14.2px;
+  font-weight: 400;
+}
+
+/* other---------------------------------------------------------------------------------------------------------------- */
+.top-namebox-css {
+  /* background-color: #f4f4f4; */
+  width: 80%;
+  margin-left: 14%;
+  margin-top: 12px;
+  height: 97px;
+  border: 1.5px solid rgba(109, 109, 109, 0.055);
+  border-radius: 3px;
+}
+.text-mooc-color-css {
+  color: #108cac;
+  font-weight: 600;
+  font-size: 19px;
+  margin-left: 33px;
+}
+.upper-main-text-css {
+  font-size: 30px;
+  color: #565656ef;
+  font-weight: 700;
+  margin: 20px;
+  padding-bottom: 19px;
+}
+.navbar-css {
+  width: 98%;
+  margin: auto;
+  background-color: #323a45;
+  height: 50px;
+  color: #d3d5d7;
+  box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.navbar-left-css {
+  padding: 16px 18px;
+  font-size: 13.7px;
+  font-weight: 500;
+  border-left: 1px solid rgba(128, 128, 128, 0.247);
+  border-right: 1px solid #222831;
+  margin-left: -4px;
+}
+.navbar-left-css-first {
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.navbar-left-css:hover {
+  background-color: #108cac;
+  color: white;
+}
+.search-nav-css {
+  background-color: #323a45;
+  height: 50px;
+  width: 80%;
+  margin-left: 20%;
+}
+.search-nav-css::placeholder {
+  color: #f4f4f4e0;
+  font-style: italic;
+  font-size: 12.5px;
+  padding-left: 11px;
+}
+.goto-section-css {
+  font-size: 11.5px;
+  color: #646464;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 22px;
+  padding: 5px 15px;
+}
+.goto:hover {
+  color: rgb(211, 211, 28);
+}
+.side-box {
+  width: 92%;
+  margin: auto;
+  padding-bottom: 24px;
+  padding-top: 4px;
+  border-radius: 4px;
+}
+.main-batch-css {
+  height: 100px;
+  margin: 20px 0;
+}
+.faded-text-light-mode {
+  color: rgba(128, 128, 128, 0.418);
+}
+.middle-css {
+}
+.middle-letter {
+  margin-left: -22px;
+}
+
+/* checked */
+
+input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+
+  cursor: pointer;
+  font-size: 10.2px;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:after {
+  content: " ";
+  background-color: #fff;
+  display: inline-block;
+  margin-left: 10px;
+
+  color: #525252;
+  width: 17px;
+  height: 17px;
+  visibility: visible;
+  border: 2px solid #727575;
+  padding-left: 3px;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "\2714";
+}

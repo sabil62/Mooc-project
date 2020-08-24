@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./bootstrap-4.5.2/dist/css/bootstrap.css" />
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css" />
+
+    <title>Mooc light</title>
+  </head>
+  <body
+    style="
+      background-image: url('./images/HCI/Mooc\ white\ bg.png');
+      background-size: auto;
+    "
+  >
+    <!-- this is main wrapper containing everything -->
+    <div class="container-large-css wrapper-css">
+      <!-- this is first row containing ku logo and info-->
+      <div class="row">
+        <div class="col-2">
+          <img
+            src="./images/HCI/0 Ku logo.png"
+            style="width: 53%; margin: 11px 0 0 20px;"
+          />
+        </div>
+        <div class="col-7"></div>
+        <div class="col-3">
+          <!-- this is the top right name box -->
+          <div class="top-namebox-css bg-box-light-mode">
+            <div class="row">
+              <div class="col-7" style="margin-top: 17px;">
+                <span class="text-mooc-color-css">Bob Singh <i class="fa fa-sort-desc" aria-hidden="true" style="font-size: 14px;"></i></span>
+              </div>
+              <div class="col-5">
+                <img
+                  src="./images/person4.jpg"
+                  style="width: 88%; margin-top: 8px;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 
+      This is the big letter of KU open course--------------------------------------------------------------------------- -->
+      <h1 class="upper-main-text-css">
+        Kathmandu University Open Online Courses
+      </h1>
+      <!-- This is navbar------------------------------------------------------------------------------------------------ -->
+      <nav class="navbar-css" id="navbar">
+        <div class="row">
+          <div class="col-4" style="margin-top: 12.5px;">
+            <span
+              class="navbar-left-css-first"
+              style="background-color: #108cac;"
+            >
+              Home
+            </span>
+            <span class="navbar-left-css">Dashboard</span>
+            <span class="navbar-left-css">Events</span>
+            <span class="navbar-left-css"
+              >Courses
+              <i
+                class="fa fa-sort-desc"
+                aria-hidden="true"
+                style="padding-left: 2px; font-size: 13px;"
+              ></i
+            ></span>
+          </div>
+          <div class="col-5"></div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-10">
+                <input
+                  type="search"
+                  class="search-nav-css d-inline-block"
+                  placeholder="Search courses"
+                  style="color: wheat;"
+                />
+              </div>
+              <div class="col-2">
+                <div
+                  class="bg-info"
+                  style="height: 50px; width: 60px; margin-left: -33px;"
+                >
+                  <i
+                    class="fa fa-search"
+                    style="font-size: 23px; padding: 10px 17px;"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- home > comp science > Comp 341 -->
+      <section class="goto-section-css" id="small-navigation">
+        <span class="goto">
+        Home </span><span style="color: rgba(128, 128, 128, 0.637);">></span> <span class="goto"> Computer
+        Science </span><span style="color: rgba(128, 128, 128, 0.637);">></span> <span class="goto">COMP
+        341</span>
+      </section>
+      <!-- this is for main body section, here sections are divided into 3column--------------------------------------- -->
+      <section id="body-section">
+        <div class="row">
+          <!-- //----------------------------------this is the left box ------------------------------------>
+          <div class="col-3">
+            <!-- change color mode here-->
+            <div class="side-box bg-sidebox-light-mode text-color-box-light">
+              <div class="row">
+                <div class="col-2">
+                  <img
+                    src="./images/HCI/batches side/settings.png"
+                    alt=""
+                    style="height: 33px; margin: 3px;"
+                  />
+                </div>
+                <div
+                  class="col-7"
+                  style="
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 10.5px 0 0 -6px;
+                    color: rgb(105, 105, 105);
+                  "
+                >
+                  Administration
+                </div>
+                <div class="col-3 mt-3 ml-1">
+                  <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-square-o-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div
+                style="
+                  height: 0.5px;
+                  background-color: rgba(201, 201, 201, 0.685);
+                  width: 87%;
+                  margin: auto;
+                "
+              ></div>
+
+              <div class="ml-3 p-1">
+                <i
+                  class="fa fa-sort-desc"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px;"
+                ></i
+                >Course administration
+              </div>
+              <div style="margin-left: 29px; padding: 1px;">
+                <i
+                  class="fa fa-user"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px;"
+                ></i
+                >Unenrol me from COMP 341
+              </div>
+              <div style="margin-left: 29px; padding: 1.5px;">
+                <i
+                  class="fa fa-rss-square"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px;"
+                ></i
+                >Grades
+              </div>
+              <div style="margin-left: 29px; padding: 1px;">
+                <i
+                  class="fa fa-eject"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px;"
+                ></i
+                >Competiencies
+              </div>
+            </div>
+          </div>
+          <!-- //----------------------------------this is the middle  ------------------------------------>
+          <div class="col-6">
+            <section class="middle-css text-color-middle-light">
+            <div style="text-align: right; font-size: 14px; font-weight: 400;">Your progress<i class="fa fa-info-circle" aria-hidden="true" style="font-size: 18.4px; padding:5px 0 0 4px;"></i></div>
+        <!-- ----------------------- this section is repeated -------------------------- -->
+        <div class="row pt-1">
+          <div class="col-1"><img src="./images/HCI/updated profile.png" alt="" style="height: 25px;"></div>
+          <div class="col-10">
+            <div style="height: 7px;"></div>
+            <span class="middle-letter">update your profile</span>
+          </div>
+          <div class="col-1"><input type="checkbox" name="" id=""></div>
+        </div>
+        <!-- two -->
+            <div class="row" style="padding-top: 3px;">
+                <div class="col-1" ><img src="./images/HCI/PDF adobe.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">COURSE MANUAL</span>        
+                  </div>       
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- three -->
+              <div class="row" style="padding-top: 3px;">
+                <div class="col-1"><img src="./images/HCI/human computer interaction.png" alt="" style="width: 29px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">Human Computer Interaction</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- four -->
+              <div class="row" style="padding-top: 3px;">
+                <div class="col-1"><img src="./images/HCI/General chat rooms.png" alt="" style="width: 32px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">General Chat room</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 3px;">
+                <div class="col-1"><img src="./images/HCI/Discussion.png" alt="" style="width: 28px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">Announcements</span>
+                </div>
+                <div class="col-1"></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 3px;">
+                <div class="col-1"><img src="./images/HCI/PDF adobe.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">MINI RESEARCH GUIDELINESS</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/PDF adobe.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">SYLLABUS</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+   
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/ILS.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">ILS</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/ILS.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">VARK</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/ILS.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">GR</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/ILS.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">online content</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/Discussion.png" alt="" style="width: 28px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">Group Discussion Forum For Project</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/ILS.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">Usability Testing of MOOC system</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/ILS.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">Usability Testing of KU elf system(elf.ku.edu.np)</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/PDF adobe.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">INTERNAL I</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              <!-- lion -->
+              <div class="row" style="padding-top: 4px;">
+                <div class="col-1"><img src="./images/HCI/Sound or Forum.png" alt="" style="height: 25px;"></div>
+                <div class="col-10">
+                  <div style="height: 7px;"></div>
+                  <span class="middle-letter">INTERNAL I Assignment Solution</span>
+                </div>
+                <div class="col-1"><input type="checkbox" name="" id=""></div>
+              </div>
+              
+              <!------------------- upper format is repeated more-------------------->
+            
+          </section>
+            
+          </div>
+          <!-- //----------------------------------this is the right box ------------------------------------>
+          <div class="col-3">
+              <!-- change color mode here-->
+              <div class="side-box bg-sidebox-light-mode text-color-box-light">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./images/HCI/batches side/Level up.png" alt="" style="height: 32px; margin: 4px;" />
+                  </div>
+                  <div class="col-7" style="
+                                  font-size: 16.4px;
+                                  font-weight: bold;
+                                  margin: 10.5px 0 0 -6px;
+                                  color: rgb(105, 105, 105);
+                                ">
+                    Level up!
+                  </div>
+                  <div class="col-3 mt-3 ml-1">
+                    <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+                    <i class="fa fa-caret-square-o-left" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div
+                style="
+                  height: 0.5px;
+                  background-color: rgba(201, 201, 201, 0.685);
+                  width: 87%;
+                  margin: auto;
+                "
+              ></div>
+              <div style="margin-left:33%;">
+                <img src="./images/HCI/batches side/0 main number batch.png" alt="" class="main-batch-css">
+              
+              </div>
+              <div style="margin-left: 43%; font-size: 15px;">
+                8420<sup>xp</sup>
+              </div>
+              <div>
+                <img src="./images/HCI/point meter.png" alt="" style="width: 95%; margin-left: 2.5%;">
+              </div>
+              <div style="font-size: 11.5px; text-align: right; padding-right: 15px;">
+                6820<sup>xp</sup><span class="faded-text-light-mode"> to go</span>
+              </div>
+              <div style="font-size: 11.7px; margin-top: 11px; ">
+                <span class="ml-4" style="font-weight: 500;" >RECENT REWARDS</span>
+              </div>
+              <!-- put here -->
+              <div style="font-size: 12.4px; margin-bottom: 10px;">
+              <div class="my-1" >
+                <span class="mx-3">20<sup>xp</sup></span>
+                <span>Course module viewed</span>
+                <div class="faded-text-light-mode d-inline" style="margin-left: 21%; margin-top: 3px;">1d</div>
+              </div>
+              <div class="my-1" >
+                <span class="mx-3">20<sup>xp</sup></span>
+                <span>Course module viewed</span>
+                <div class="faded-text-light-mode d-inline" style="margin-left: 21%;">1d</div>
+              </div>
+              <div class="my-1" >
+                <span class="mx-3">40<sup>xp</sup></span>
+                <span>Course module completed</span>
+                <div class="faded-text-light-mode d-inline" style="margin-left: 14%;">1d</div>
+              </div>
+              </div>
+              
+              <!-- next one ladder and info -->
+              <div class="row mt-4">
+                <div class="col-6" style="text-align: center;">
+                  
+                  <div style="font-size: 10px; margin-top: 6px;">Info</div>
+                </div>
+                <div class="col-6" style="text-align: center;">
+                  <i class="fa fa-trophy" aria-hidden="true" style="font-size: 20px;"></i>
+                  <div style="font-size: 10px; margin-top: 6px;">Ladder</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </div>
+    <!-- reference -->
+    <img src="./images/HCI/0mooc2.png" alt="" style="width: 100%; margin-top: 80px; border: 1px dotted black;" />
+  </body>
+</html>
