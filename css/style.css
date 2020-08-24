@@ -21,6 +21,14 @@ body {
 .bg-sidebox-light-mode {
   background-color: #e5e5e5;
 }
+.bg-weekbox-light-mode {
+  background-color: #eeeeee;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  border-left: 3.6px solid #108cac;
+  border-radius: 3px;
+}
 .text-color-box-light {
   color: #8b8b8b;
   font-size: 13.2px;
@@ -30,6 +38,9 @@ body {
   color: #838181;
   font-size: 14.2px;
   font-weight: 400;
+}
+.text-orange-css {
+  color: #bba673;
 }
 
 /* other---------------------------------------------------------------------------------------------------------------- */
@@ -107,7 +118,7 @@ body {
 .side-box {
   width: 92%;
   margin: auto;
-  padding-bottom: 24px;
+  padding-bottom: 29px;
   padding-top: 4px;
   border-radius: 4px;
 }
@@ -118,10 +129,15 @@ body {
 .faded-text-light-mode {
   color: rgba(128, 128, 128, 0.418);
 }
-.middle-css {
-}
+
 .middle-letter {
   margin-left: -22px;
+}
+
+.side-image-css {
+  height: 100px;
+
+  margin: 22px 0 5px 11px;
 }
 
 /* checked */
@@ -152,4 +168,7 @@ input[type="checkbox"]:after {
 
 input[type="checkbox"]:checked:after {
   content: "\2714";
+}
+.hr-line {
+  border-top: 2px solid rgba(128, 128, 128, 0.158);
 }
