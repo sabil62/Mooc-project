@@ -29,6 +29,7 @@ body {
   border-left: 3.6px solid #108cac;
   border-radius: 3px;
 }
+
 .text-color-box-light {
   color: #8b8b8b;
   font-size: 13.2px;
@@ -132,6 +133,7 @@ body {
 
 .middle-letter {
   margin-left: -22px;
+  cursor: pointer;
 }
 
 .side-image-css {

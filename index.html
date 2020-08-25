@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./bootstrap-4.5.2/dist/css/bootstrap.css" />
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./bootstrap-4.5.2/dist/js/bootstrap.min.js"></script>
 
     <title>Mooc light</title>
   </head>
@@ -451,9 +457,93 @@
                 <div class="col-1"><input type="checkbox" name="" id="" /></div>
               </div>
               <!-- -------------------------now for another week--------------------------- -->
-
+              <!-- ----------------------------------- WEEK 3 ----------------------------------- -->
               <hr class="hr-line" />
-              <div class="bg-weekbox-light-mode">Week 3</div>
+              <div
+                class="weeks bg-weekbox-light-mode"
+                role="button"
+                data-toggle="collapse"
+                data-target="#week3-content"
+                aria-expanded="false"
+                aria-controls="week3-content"
+              >
+                Week 3
+                <span class="plusMinus">
+                  <i
+                    class="fa fa-minus"
+                    aria-hidden="true"
+                    style="margin-left: 85%;"
+                  ></i>
+                </span>
+              </div>
+
+              <div class="collapse" id="week3-content">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </div>
+              </div>
+              <!------------------------------------- end of week 3 --------------------------------------->
+              <!-- ----------------------------------- WEEK 3 activity ----------------------------------- -->
+              <hr class="hr-line" />
+              <div
+                class="weeks bg-weekbox-light-mode"
+                role="button"
+                data-toggle="collapse"
+                data-target="#week3-activity-content"
+                aria-expanded="false"
+                aria-controls="week3-activity-content"
+              >
+                Week 3
+                <span class="plusMinus">
+                  <i
+                    class="fa fa-minus"
+                    aria-hidden="true"
+                    style="margin-left: 85%;"
+                  ></i>
+                </span>
+              </div>
+
+              <div class="collapse" id="week3-activity-content">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </div>
+              </div>
+              <!------------------------------------- end of week 3 activity --------------------------------------->
+              <!-- ----------------------------------- WEEK 2 ----------------------------------- -->
+              <hr class="hr-line" />
+              <div
+                class="weeks bg-weekbox-light-mode"
+                role="button"
+                data-toggle="collapse"
+                data-target="#week2-content"
+                aria-expanded="false"
+                aria-controls="week2-content"
+              >
+                Week 3
+                <span class="plusMinus">
+                  <i
+                    class="fa fa-minus"
+                    aria-hidden="true"
+                    style="margin-left: 85%;"
+                  ></i>
+                </span>
+              </div>
+
+              <div class="collapse" id="week2-content">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </div>
+              </div>
+              <!------------------------------------- end of week 3 --------------------------------------->
               <!------------------- upper format is repeated more-------------------->
             </section>
           </div>
@@ -882,7 +972,42 @@
         alt=""
         style="width: 100%; margin-top: 80px; border: 1px dotted black;"
       />
+      <!-- this is test -->
     </div>
+    <!-- -----------------------------------------------these are scripts----------------------------------------------- -->
+    <script>
+      $(".collapse").collapse();
+    </script>
+    <script>
+      var weekEvent = document.getElementsByClassName("weeks");
+      var plusMinus = document.getElementsByClassName("plusMinus");
+
+      for (let index = 0; index < weekEvent.length; index++) {
+        weekEvent[index].addEventListener(
+          "click",
+          onclick.bind(null, event, index)
+        );
+      }
+      // for (let x = 0; x < plusMinus.length; x++) {
+      //   count[x] = 0;
+      // }
+      var count = 0;
+      function onclick(e, index) {
+        count++; //count[index]++;
+        console.log("clicked");
+        console.log(count);
+        clickCount(count, index);
+      }
+      function clickCount(count, index) {
+        if (count % 2 == 0) {
+          plusMinus[index].innerHTML =
+            '<i class="fa fa-minus"   style="margin-left: 85%;" aria-hidden="true"></i>';
+        } else {
+          plusMinus[index].innerHTML =
+            '<i class="fa fa-plus"  style="margin-left: 85%;" aria-hidden="true"></i>';
+        }
+      }
+    </script>
     <!-- reference -->
   </body>
 </html>
