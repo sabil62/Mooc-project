@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./bootstrap-4.5.2/dist/css/bootstrap.css" />
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./bootstrap-4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <title>Mooc light</title>
+  </head>
+  <body
+    style="
+      background-image: url('./images/HCI/Mooc\ white\ bg.png');
+      background-size: auto;
+    "
+  >
+    <!-- this is main wrapper containing everything -->
+    <div class="container-large-css wrapper-css">
+      <!-- this is first row containing ku logo and info-->
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="./images/HCI/0 Ku logo.png"
+            style="width: 115px; margin: 11px 0 0 20px"
+          />
+        </div>
+
+        <div class="col-md-3 offset-md-7">
+          <!-- this is the top right name box -->
+          <div class="top-namebox-css bg-box-light-mode">
+            <div class="row">
+              <div class="col-7" style="margin-top: 17px">
+                <span class="text-mooc-color-css"
+                  >Bob Singh
+                  <i
+                    class="fa fa-sort-desc"
+                    aria-hidden="true"
+                    style="font-size: 14px"
+                  ></i
+                ></span>
+              </div>
+              <div class="col-5">
+                <img
+                  src="./images/person4.jpg"
+                  style="width: 80px; margin-top: 8px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 
+      This is the big letter of KU open course--------------------------------------------------------------------------- -->
+      <h1 class="upper-main-text-css">
+        Kathmandu University Open Online Courses
+      </h1>
+      <!-- This is navbar------------------------------------------------------------------------------------------------ -->
+      <nav class="navbar-css" id="navbar">
+        <div class="row">
+          <div class="col-4" style="margin-top: 12.5px">
+            <span
+              class="navbar-left-css-first"
+              style="background-color: #108cac"
+            >
+              Home
+            </span>
+            <span class="navbar-left-css">Dashboard</span>
+            <span class="navbar-left-css">Events</span>
+            <span class="navbar-left-css"
+              >Courses
+              <i
+                class="fa fa-sort-desc"
+                aria-hidden="true"
+                style="padding-left: 2px; font-size: 13px"
+              ></i
+            ></span>
+          </div>
+          <div class="col-5"></div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-10">
+                <input
+                  type="search"
+                  class="search-nav-css d-inline-block"
+                  placeholder="Search courses"
+                  style="color: wheat"
+                />
+              </div>
+              <div class="col-2">
+                <div
+                  class="bg-info"
+                  style="height: 50px; width: 60px; margin-left: -33px"
+                >
+                  <i
+                    class="fa fa-search"
+                    style="font-size: 23px; padding: 10px 17px"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- home > comp science > Comp 341 -->
+      <section class="goto-section-css" id="small-navigation">
+        <span class="goto"> Home </span
+        ><span style="color: rgba(128, 128, 128, 0.637)">></span>
+        <span class="goto"> Computer Science </span
+        ><span style="color: rgba(128, 128, 128, 0.637)">></span>
+        <span class="goto">COMP 341</span>
+        <span style="color: rgba(128, 128, 128, 0.637)">></span>
+        <span class="goto">User Documentation and Online Help</span>      
+      </section>
+
+      <!-- ----------------------- VVI This is the main column section ------------------------------->
+      <section  id="main-part">
+          <div class="row">
+              <div class="col-lg-3 col-md-3 col-12 ">
+                   <div class="side-box bg-sidebox-light-mode text-color-box-light">
+              <div class="row">
+                <div class="col-2">
+                  <img
+                    src="./images/HCI/batches side/settings.png"
+                    alt=""
+                    style="height: 33px; margin: 3px"
+                  />
+                </div>
+                <div
+                  class="col-7"
+                  style="
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 10.5px 0 0 -6px;
+                    color: rgb(105, 105, 105);
+                  "
+                >
+                  Administration
+                </div>
+                <div class="col-3 mt-3 ml-1">
+                  <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-square-o-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="line-below-side-box-heading"></div>
+
+              <div class="ml-3 p-1">
+                <i
+                  class="fa fa-sort-desc"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Course administration
+              </div>
+              <div style="margin-left: 29px; padding: 1px">
+                <i
+                  class="fa fa-user"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Unenrol me from COMP 341
+              </div>
+              <div style="margin-left: 29px; padding: 1.5px">
+                <i
+                  class="fa fa-rss-square"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Grades
+              </div>
+              <div style="margin-left: 29px; padding: 1px">
+                <i
+                  class="fa fa-eject"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Competiencies
+              </div>
+            </div>
+              </div>
+              <div class="col-lg-9 col-md-9 col-12">
+                  pion
+              </div>
+          </div>
+
+      </section>
+
+      <!-- -----------------------Last navigation------------------------------- -->
+      <img
+        src="./images/HCI/Bottom bar.jpg"
+        alt=""
+        style="width: 100%; margin-top: 80px; border: 1px dotted black"
+      />
+
+      </body>
+</html>

@@ -9,13 +9,14 @@ body {
   margin: auto;
 }
 .wrapper-css {
-  background-color: rgb(255, 255, 247);
+  background-color: rgb(255, 255, 255);
   border-top: 3px solid #108cac;
   margin-top: 36px;
 }
 /* the change in top namebox css can be changed ------------------------------------------------------------*/
 /* these are modes */
 .bg-box-light-mode {
+  /* this is for bob singh only */
   background-color: #f4f4f4;
 }
 .bg-sidebox-light-mode {
