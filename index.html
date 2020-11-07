@@ -22,6 +22,63 @@
       background-size: auto;
     "
   >
+    <!-- -------------------This is toogle---------------- -->
+
+    <div class="top">
+      <span class="make-right">
+        <input type="checkbox" class="checkbox" id="check-dark-modes" />
+        <label class="label" for="check-dark-modes">
+          <i class="fa fa-moon-o"></i>
+          <i class="fa fa-sun-o"></i>
+          <div class="ball"></div>
+        </label>
+      </span>
+    </div>
+
+    <script>
+      const chk = document.getElementById("check-dark-modes");
+
+      chk.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+
+        var wrapper = document.getElementsByClassName("wrapper-css");
+        for (var i = 0; i < wrapper.length; i++) {
+          wrapper[i].classList.toggle("wrapper-css-dark");
+        }
+        var box = document.getElementsByClassName("bg-box-light-mode");
+        var sidebox = document.getElementsByClassName("bg-sidebox-light-mode");
+        var textColorbox = document.getElementsByClassName(
+          "text-color-box-light"
+        );
+        var textColormiddle = document.getElementsByClassName(
+          "text-color-middle-light"
+        );
+        var titleText = document.getElementsByClassName("upper-main-text-css");
+        var sideboxHeading = document.getElementsByClassName(
+          "side-box-heading"
+        );
+
+        for (let i = 0; i < box.length; i++) {
+          box[i].classList.toggle("bg-box-dark-mode");
+        }
+        for (let i = 0; i < sidebox.length; i++) {
+          sidebox[i].classList.toggle("bg-sidebox-dark-mode");
+        }
+        for (let i = 0; i < textColorbox.length; i++) {
+          textColorbox[i].classList.toggle("text-color-box-dark");
+        }
+        for (let i = 0; i < textColormiddle.length; i++) {
+          textColormiddle[i].classList.toggle("text-color-middle-dark");
+        }
+        for (let i = 0; i < titleText.length; i++) {
+          titleText[i].classList.toggle("upper-main-text-css-dark");
+        }
+        for (let i = 0; i < sideboxHeading.length; i++) {
+          sideboxHeading[i].classList.toggle("side-box-heading-dark");
+        }
+      });
+    </script>
+
     <!-- this is main wrapper containing everything -->
     <div class="container-large-css wrapper-css">
       <!-- this is first row containing ku logo and info-->
@@ -132,17 +189,7 @@
                     style="height: 33px; margin: 3px"
                   />
                 </div>
-                <div
-                  class="col-7"
-                  style="
-                    font-size: 16px;
-                    font-weight: bold;
-                    margin: 10.5px 0 0 -6px;
-                    color: rgb(105, 105, 105);
-                  "
-                >
-                  Administration
-                </div>
+                <div class="col-7 side-box-heading">Administration</div>
                 <div class="col-3 mt-3 ml-1">
                   <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
                   <i class="fa fa-caret-square-o-left" aria-hidden="true"></i>

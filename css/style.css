@@ -1,15 +1,95 @@
 body {
-  background-image: url("./images/HCI/0mooc.png");
+  background-image: url("./images/HCI/Moocs.png");
   /* ./images/HCI/Main front.png */
-  background-size: cover;
-  background-color: rgb(228, 246, 255);
+  /* background-size: cover; 
+  style="
+      background-image: url('./images/HCI/Mooc\ white\ bg.png');
+      background-size: auto;
+    "
+  */
+  background-size: auto;
 }
+/* for toogle of dark mode */
+/* body {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	transition: background 0.2s linear;
+} */
+
+body.dark {
+  background-color: #1b222c;
+}
+.top {
+  position: relative;
+}
+.make-right {
+  position: fixed;
+  right: 15px;
+  top: 13px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: rgb(55, 73, 73);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 24px;
+  width: 50px;
+  transform: scale(1.12);
+  box-shadow: 1px 1px 2px rgba(224, 206, 174, 0.911);
+  box-shadow: -1px -1px -2px rgba(224, 206, 174, 0.911);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24.5px);
+}
+
+.fa-moon-o {
+  color: #f1c40f;
+}
+
+.fa-sun-o {
+  color: #f39c12;
+}
+
+/* For middle containers */
 .container-large-css {
   width: 90%;
   margin: auto;
 }
 .wrapper-css {
   background-color: rgb(255, 255, 255);
+  border-top: 3px solid #108cac;
+  margin-top: 36px;
+}
+/* Dark of wrapper */
+.wrapper-css-dark {
+  background-color: #16202c;
   border-top: 3px solid #108cac;
   margin-top: 36px;
 }
@@ -22,6 +102,17 @@ body {
 .bg-sidebox-light-mode {
   background-color: #e5e5e5;
 }
+/* dark modes of above two */
+.bg-box-dark-mode {
+  /* this is for bob singh only */
+  background-color: #233543e1;
+  box-shadow: 1px 1px 6px 0.7px rgba(244, 255, 182, 0.26);
+}
+.bg-sidebox-dark-mode {
+  background-color: #233543;
+  box-shadow: 1px 1px 6px 0.5px rgba(244, 255, 182, 0.226);
+}
+
 .bg-weekbox-light-mode {
   background-color: #eeeeee;
   padding: 5px;
@@ -36,8 +127,18 @@ body {
   font-size: 13.2px;
   font-weight: 500;
 }
+.text-color-box-dark {
+  color: #d4d2d4;
+  font-size: 13.2px;
+  font-weight: 500;
+}
 .text-color-middle-light {
   color: #585858;
+  font-size: 14.2px;
+  font-weight: 400;
+}
+.text-color-middle-dark {
+  color: #d4d2d4c0;
   font-size: 14.2px;
   font-weight: 400;
 }
@@ -64,6 +165,13 @@ body {
 .upper-main-text-css {
   font-size: 30px;
   color: #565656ef;
+  font-weight: 700;
+  margin: 20px;
+  padding-bottom: 19px;
+}
+.upper-main-text-css-dark {
+  font-size: 30px;
+  color: #d4d2d4;
   font-weight: 700;
   margin: 20px;
   padding-bottom: 19px;
@@ -195,6 +303,12 @@ input[type="checkbox"]:checked:after {
   font-weight: bold;
   margin: 10.5px 0 0 -6px;
   color: rgb(105, 105, 105);
+}
+.side-box-heading-dark {
+  font-size: 16.4px;
+  font-weight: bold;
+  margin: 10.5px 0 0 -6px;
+  color: #bebebe;
 }
 .input-search {
   width: 72%;
