@@ -16,12 +16,7 @@
 
     <title>Mooc light</title>
   </head>
-  <body
-    style="
-      background-image: url('./images/HCI/Mooc\ white\ bg.png');
-      background-size: auto;
-    "
-  >
+  <body>
     <!-- -------------------This is toogle---------------- -->
 
     <div class="top">
@@ -57,6 +52,10 @@
         var sideboxHeading = document.getElementsByClassName(
           "side-box-heading"
         );
+        var goto = document.getElementsByClassName("goto-section-css");
+        var faded = document.getElementsByClassName("faded-text-light-mode");
+        var weekbox = document.getElementsByClassName("bg-weekbox-light-mode");
+        var stash = document.getElementsByClassName("image-batch");
 
         for (let i = 0; i < box.length; i++) {
           box[i].classList.toggle("bg-box-dark-mode");
@@ -75,6 +74,18 @@
         }
         for (let i = 0; i < sideboxHeading.length; i++) {
           sideboxHeading[i].classList.toggle("side-box-heading-dark");
+        }
+        for (let i = 0; i < goto.length; i++) {
+          goto[i].classList.toggle("goto-section-css-dark");
+        }
+        for (let i = 0; i < faded.length; i++) {
+          faded[i].classList.toggle("faded-text-dark-mode");
+        }
+        for (let i = 0; i < weekbox.length; i++) {
+          weekbox[i].classList.toggle("bg-weekbox-dark-mode");
+        }
+        for (let i = 0; i < stash.length; i++) {
+          stash[i].classList.toggle("image-batch-dark");
         }
       });
     </script>
@@ -230,7 +241,63 @@
                 >Competiencies
               </div>
             </div>
+            <!-- -----------------------------------This is things to do----------------------------------- -->
+            <div
+              class="side-box bg-sidebox-light-mode text-color-box-light"
+              style="margin-top: 16px"
+            >
+              <div class="row">
+                <div class="col-2">
+                  <img
+                    src="./images/HCI/batches side/Level up.png"
+                    alt=""
+                    style="height: 33px; margin: 3px"
+                  />
+                </div>
+                <div class="col-7 side-box-heading">Things to do</div>
+                <div class="col-3 mt-3 ml-1">
+                  <i class="fa fa-caret-square-o-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-square-o-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="line-below-side-box-heading"></div>
+
+              <div class="ml-3 pt-2">
+                <i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Internal I
+              </div>
+              <div class="ml-3 pt-1">
+                <i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Quiz | Week 7
+              </div>
+              <div class="ml-3 pt-1">
+                <i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Quiz | Week 3
+              </div>
+              <div class="ml-3 pt-1">
+                <i
+                  class="fa fa-caret-right"
+                  aria-hidden="true"
+                  style="padding-right: 6px; font-size: 17px"
+                ></i
+                >Heuristic evaluation
+              </div>
+            </div>
           </div>
+
+          <!-- -----------------------------------This is things to do -->
           <!-- //----------------------------------this is the middle  ------------------------------------>
           <div class="col-lg-6 col-md-8">
             <section class="middle-css text-color-middle-light">
@@ -5148,11 +5215,12 @@
               </div>
               <div class="line-below-side-box-heading"></div>
               <div class="pt-2 px-2">
-                <img
+                <!-- <img
                   src="./images/HCI/all batches.png"
                   alt=""
                   style="width: 100%"
-                />
+                /> -->
+                <div class="image-batch"></div>
               </div>
             </div>
             <!-- end of stash box -->

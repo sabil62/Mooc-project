@@ -1,5 +1,5 @@
 body {
-  background-image: url("./images/HCI/Moocs.png");
+  background-image: url("../images/HCI/Moocs.png");
   /* ./images/HCI/Main front.png */
   /* background-size: cover; 
   style="
@@ -22,6 +22,7 @@ body {
 
 body.dark {
   background-color: #1b222c;
+  background-image: url(../images/HCI/backdark.jpg);
 }
 .top {
   position: relative;
@@ -115,6 +116,14 @@ body.dark {
 
 .bg-weekbox-light-mode {
   background-color: #eeeeee;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  border-left: 3.6px solid #108cac;
+  border-radius: 3px;
+}
+.bg-weekbox-dark-mode {
+  background-color: #2f485ae5;
   padding: 5px;
   font-size: 20px;
   font-weight: 700;
@@ -215,7 +224,7 @@ body.dark {
   padding-left: 11px;
 }
 .goto-section-css {
-  font-size: 11.5px;
+  font-size: 11.8px;
   color: #555555;
   font-weight: 500;
   margin-top: 30px;
@@ -224,6 +233,14 @@ body.dark {
 }
 .goto:hover {
   color: rgb(211, 211, 28);
+}
+.goto-section-css-dark {
+  font-size: 11.8;
+  color: #87a4b1;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 22px;
+  padding: 5px 15px;
 }
 .side-box {
   width: 92%;
@@ -238,6 +255,9 @@ body.dark {
 }
 .faded-text-light-mode {
   color: rgba(128, 128, 128, 0.418);
+}
+.faded-text-dark-mode {
+  color: rgba(157, 204, 216, 0.425);
 }
 
 .middle-letter {
@@ -315,4 +335,15 @@ input[type="checkbox"]:checked:after {
   padding: 4px;
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 3.2px;
+}
+
+.image-batch {
+  background-image: url(../images/HCI/all\ batches.png);
+  height: 470px;
+  background-size: cover;
+}
+.image-batch-dark {
+  background-image: url(../images/HCI/batches\ dark.png);
+  height: 470px;
+  background-size: cover;
 }
