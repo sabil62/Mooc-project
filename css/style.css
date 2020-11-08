@@ -94,6 +94,11 @@ body.dark {
   border-top: 3px solid #108cac;
   margin-top: 36px;
 }
+.wrapper-css-light {
+  background-color: rgb(255, 255, 255);
+  border-top: 3px solid #108cac;
+  margin-top: 36px;
+}
 /* the change in top namebox css can be changed ------------------------------------------------------------*/
 /* these are modes */
 .bg-box-light-mode {
@@ -112,6 +117,14 @@ body.dark {
 .bg-sidebox-dark-mode {
   background-color: #233543;
   box-shadow: 1px 1px 6px 0.5px rgba(244, 255, 182, 0.226);
+}
+/* REPEAT */
+.bg-box-light-modes {
+  /* this is for bob singh only */
+  background-color: #f4f4f4;
+}
+.bg-sidebox-light-modes {
+  background-color: #e5e5e5;
 }
 
 .bg-weekbox-light-mode {
@@ -141,6 +154,12 @@ body.dark {
   font-size: 13.2px;
   font-weight: 500;
 }
+/* Repeat */
+.text-color-box-lights {
+  color: #8b8b8b;
+  font-size: 13.2px;
+  font-weight: 500;
+}
 .text-color-middle-light {
   color: #585858;
   font-size: 14.2px;
@@ -152,7 +171,7 @@ body.dark {
   font-weight: 400;
 }
 .text-orange-css {
-  color: #bba673;
+  color: #9e823a;
 }
 
 /* other---------------------------------------------------------------------------------------------------------------- */
@@ -181,6 +200,14 @@ body.dark {
 .upper-main-text-css-dark {
   font-size: 30px;
   color: #d4d2d4;
+  font-weight: 700;
+  margin: 20px;
+  padding-bottom: 19px;
+}
+/* repeat */
+.upper-main-text-csss {
+  font-size: 30px;
+  color: #565656ef;
   font-weight: 700;
   margin: 20px;
   padding-bottom: 19px;
@@ -235,8 +262,17 @@ body.dark {
   color: rgb(211, 211, 28);
 }
 .goto-section-css-dark {
-  font-size: 11.8;
+  font-size: 11.8px;
   color: #87a4b1;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 22px;
+  padding: 5px 15px;
+}
+/* Repeat */
+.goto-section-csss {
+  font-size: 11.8px;
+  color: #555555;
   font-weight: 500;
   margin-top: 30px;
   margin-bottom: 22px;
@@ -330,6 +366,13 @@ input[type="checkbox"]:checked:after {
   margin: 10.5px 0 0 -6px;
   color: #bebebe;
 }
+/* repeat */
+.side-box-heading-lighter {
+  font-size: 16.4px;
+  font-weight: bold;
+  margin: 10.5px 0 0 -6px;
+  color: black;
+}
 .input-search {
   width: 72%;
   padding: 4px;
@@ -346,4 +389,69 @@ input[type="checkbox"]:checked:after {
   background-image: url(../images/HCI/batches\ dark.png);
   height: 470px;
   background-size: cover;
+}
+
+/* for new checkbox */
+.checkbox-sample {
+  opacity: 0;
+  position: absolute;
+}
+
+.label-page {
+  background-color: rgb(55, 73, 73);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 24px;
+  width: 50px;
+  transform: scale(1.12);
+  box-shadow: 1px 1px 2px rgba(224, 206, 174, 0.911);
+  box-shadow: -1px -1px -2px rgba(224, 206, 174, 0.911);
+}
+
+.label-page .ball-page {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(24.5px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox-sample:checked + .label-page .ball-page {
+  transform: translateX(0px);
+}
+
+/* .page-bg-dark {
+  background-image: url(../images/HCI/backdark.jpg);
+}
+
+.page-bg-light {
+  background-color: #c50b0b;
+  /* #f9f9f9 */
+/* } */
+
+/* text color */
+
+.text-dark-mode {
+  color: #d4d2d4;
+  font-size: 13.7px;
+  font-weight: 500;
+  font-weight: 450;
+  line-height: 1.65;
+  word-spacing: 1.1;
+}
+.text-light-mode {
+  color: #504f4f;
+  font-size: 13.7px;
+  font-weight: 500;
+  font-weight: 450;
+  line-height: 1.65;
 }
