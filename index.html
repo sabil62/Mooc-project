@@ -29,7 +29,12 @@
 
     <div class="top">
       <span class="make-right">
-        <input type="checkbox" class="checkbox" id="check-dark-modes" />
+        <input
+          type="checkbox"
+          class="checkbox"
+          id="check-dark-modes"
+          name="check-dark-modes-checkbox"
+        />
         <label class="label" for="check-dark-modes">
           <i class="fa fa-moon-o"></i>
           <i class="fa fa-sun-o"></i>
@@ -39,9 +44,38 @@
     </div>
 
     <script>
+      //--------------------------------------------------DARK MODE-----------------------------------------------------
       const chk = document.getElementById("check-dark-modes");
+      // const chk = document.querySelector(
+      //   "input[name=check-dark-modes-checkbox]"
+      // );
+      window.onload = function () {
+        checkDarkMode();
+      };
+      function checkDarkMode() {
+        let darkmode = localStorage.getItem("darkmode");
+        if (darkmode) {
+          chk.checked = true;
+          toogleDarkMode();
+        } else {
+          chk.checked = false;
+        }
+      }
 
-      chk.addEventListener("change", () => {
+      chk.addEventListener("change", (e) => {
+        console.log("lion");
+        if (e.target.checked) {
+          localStorage.setItem("darkmode", "darkmode");
+          console.log("yes checked");
+        } else {
+          localStorage.removeItem("darkmode");
+          console.log("no checked");
+        }
+
+        toogleDarkMode();
+      });
+
+      function toogleDarkMode() {
         document.body.classList.toggle("dark");
 
         var wrapper = document.getElementsByClassName("wrapper-css");
@@ -94,7 +128,7 @@
         for (let i = 0; i < stash.length; i++) {
           stash[i].classList.toggle("image-batch-dark");
         }
-      });
+      }
     </script>
 
     <!-- this is main wrapper containing everything -->
@@ -630,7 +664,7 @@
               </div>
               <!-- -------------------------------------------starting of week 7------------------------------------------ -->
               <hr class="hr-line" />
-              
+
               <div
                 class="weekBox bg-weekbox-light-mode"
                 type="button"
