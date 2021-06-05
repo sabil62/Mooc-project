@@ -2,7 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Build from "./container/build/build";
 import Logo from "./assets/HCI/0 Ku logo.png";
-import { CaretDownOutlined } from "@ant-design/icons";
+import { CaretDownOutlined, SearchOutlined } from "@ant-design/icons";
 import Profile from "./assets/person4.jpg";
 
 function App() {
@@ -29,7 +29,24 @@ function App() {
           Kathmandu University Open Online Courses
         </h1>
         <br />
-        <div className="navbar"></div>
+        <div className="navbar">
+          <div className="navbar-side">
+            <span>Home</span>
+            <span>Dashboard</span>
+            <span>Events</span>
+            <span>
+              Courses <CaretDownOutlined />
+            </span>
+          </div>
+          <div>
+            <input
+              type="text"
+              className="input-text"
+              placeholder="Search Courses"
+            />
+            <SearchOutlined />
+          </div>
+        </div>
         <button className="btn btn-success">Bootstrap</button>
         <Build />
       </div>

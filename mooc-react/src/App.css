@@ -51,5 +51,25 @@ body {
 .navbar {
   width: 100%;
   background-color: #323a45;
-  height: 56px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(240, 240, 240);
+  font-weight: 500;
+  font-size: 14px;
+}
+.input-text {
+  padding: 10px 16px;
+  margin-top: -7px;
+  background-color: #323a45;
+  color: white;
+
+  /* border-left: 1px rgb(51, 51, 51); */
+}
+.input-text:not(:focus) {
+  font-style: italic;
+}
+.navbar-side span {
+  padding: 0 20px;
 }
