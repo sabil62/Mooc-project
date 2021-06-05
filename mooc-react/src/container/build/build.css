@@ -43,10 +43,12 @@
   color: rgb(240, 240, 240);
   font-weight: 500;
   font-size: 14px;
+  box-shadow: 0 10px 22px -4px rgba(24, 24, 24, 0.555);
+  cursor: pointer;
 }
 .input-text {
-  padding: 11px 16px;
-  margin-top: -6px;
+  padding: 12px 16px;
+  margin-top: -8px;
   background-color: #323a45;
   color: white;
 
@@ -54,4 +56,13 @@
 }
 .input-text:not(:focus) {
   font-style: italic;
+}
+.navbar-search {
+  display: inline-block;
+  background-color: #108cac;
+  height: 100%;
+  margin-top: -8px;
+}
+.navbar-search:hover {
+  background-color: #0c7994;
 }

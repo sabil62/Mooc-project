@@ -39,7 +39,16 @@ class Build extends Component {
               className="input-text"
               placeholder="Search Courses"
             />
-            <SearchOutlined />
+            <div className="navbar-search">
+              <SearchOutlined
+                style={{
+                  color: "white",
+                  fontSize: "1.3rem",
+                  padding: "11px",
+                  paddingTop: "18px",
+                }}
+              />
+            </div>
           </div>
         </div>
       </React.Fragment>

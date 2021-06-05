@@ -13,3 +13,11 @@ body {
   border-top: 4px solid #108cac;
   padding-bottom: 4rem;
 }
+.navigation-letters {
+  font-size: 11.4px;
+  font-weight: 500;
+  margin: 1.6rem 0;
+}
+.navigation-letters span {
+  margin: 0 4px;
+}
