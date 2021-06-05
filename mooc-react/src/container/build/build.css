@@ -1,0 +1,57 @@
+.logo-and-info {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-box {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 5px 14px;
+  width: 275px;
+  height: 100px;
+}
+.profile-box .profile-name {
+  display: inline-block;
+  width: 65%;
+  color: #108cac;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.profile-box .profile-photo {
+  display: inline-block;
+  width: 35%;
+}
+.profile-box .profile-name .profile-name-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kathmandu-heading {
+  color: #616161;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.navbar {
+  width: 100%;
+  background-color: #323a45;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(240, 240, 240);
+  font-weight: 500;
+  font-size: 14px;
+}
+.input-text {
+  padding: 11px 16px;
+  margin-top: -6px;
+  background-color: #323a45;
+  color: white;
+
+  /* border-left: 1px rgb(51, 51, 51); */
+}
+.input-text:not(:focus) {
+  font-style: italic;
+}

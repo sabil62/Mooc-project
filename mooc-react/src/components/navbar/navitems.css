@@ -1,0 +1,9 @@
+.navitems-column {
+  display: flex;
+  flex-direction: column;
+}
+.navitems-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: -8px;
+}

@@ -1,0 +1,10 @@
+.navitem-outside:hover {
+  background-color: #108cac;
+}
+
+.navitem-inside {
+  padding: 15px 20px;
+  padding-bottom: 14px;
+  border-left: 1px solid rgba(83, 83, 83, 0.562);
+  border-right: 1px solid rgba(37, 37, 37, 0.486);
+}
