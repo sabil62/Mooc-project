@@ -5,13 +5,14 @@ import "./navitems.css";
 
 const navitems = (props) => {
   let navclass = props.column ? "navitems-column" : "navitems-row";
+  let colOrNot = props.column ? true : false;
   return (
     <React.Fragment>
       <div className={navclass}>
-        <Navitem>Home</Navitem>
-        <Navitem>Dashboard</Navitem>
-        <Navitem>Events</Navitem>
-        <Navitem>
+        <Navitem col={colOrNot}>Home</Navitem>
+        <Navitem col={colOrNot}>Dashboard</Navitem>
+        <Navitem col={colOrNot}>Events</Navitem>
+        <Navitem col={colOrNot}>
           Courses
           <div style={{ width: "3.5px", display: "inline-block" }}></div>
           <CaretDownOutlined style={{ fontSize: "13px" }} />

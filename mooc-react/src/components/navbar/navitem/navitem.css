@@ -8,3 +8,10 @@
   border-left: 1px solid rgba(83, 83, 83, 0.562);
   border-right: 1px solid rgba(37, 37, 37, 0.486);
 }
+/* ----------------------------col----------------- */
+.navitem-outside-column:hover {
+  background-color: #164914;
+}
+.navitem-inside-column {
+  background-color: rgba(240, 248, 255, 0.466);
+}

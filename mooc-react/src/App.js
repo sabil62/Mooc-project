@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Build from "./container/build/build";
+import MainContent from "./components/main-content/main-content";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <span>COMP 341</span>
           {/* <span>{">"}</span> */}
         </div>
+        <MainContent />
         <button className="btn btn-success">Bootstrap</button>
       </div>
     </div>
