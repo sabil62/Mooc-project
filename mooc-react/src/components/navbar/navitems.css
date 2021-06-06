@@ -28,3 +28,33 @@
 .navbar-search:hover {
   background-color: #0c7994;
 }
+.navbars-boo {
+  background-color: #323a45;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(240, 240, 240);
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 10px 22px -4px rgba(24, 24, 24, 0.555);
+  cursor: pointer;
+}
+.navbar {
+  background-image: none;
+}
+
+.nav-link {
+  color: white;
+  display: inline;
+}
+.nav-link:hover {
+  color: white;
+}
+.nav-link:focus {
+  color: bisque;
+}
+.navbar-display {
+  display: flex;
+  justify-content: space-between;
+}

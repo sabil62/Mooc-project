@@ -1,13 +1,21 @@
 import React from "react";
 import Navitem from "./navitem/navitem";
 import "./navitems.css";
-import { CaretDownOutlined, SearchOutlined } from "@ant-design/icons";
+import {
+  CaretDownOutlined,
+  SearchOutlined,
+  BarsOutlined,
+} from "@ant-design/icons";
 
 const navbar = (props) => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        Navbar
+    <nav class="navbar navbar-expand-lg navbars-boo">
+      <a
+        class="navbar-brand d-lg-none"
+        href="#"
+        style={{ color: "white", padding: "0 30px" }}
+      >
+        MOOC
       </a>
       <button
         class="navbar-toggler"
@@ -18,11 +26,14 @@ const navbar = (props) => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <BarsOutlined style={{ color: "white" }} />
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <div
+        class="collapse navbar-collapse id navbar-display"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#">
               <Navitem>Home</Navitem>
@@ -40,7 +51,7 @@ const navbar = (props) => {
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link"
               href="#"
               id="navbarDropdown"
               role="button"
