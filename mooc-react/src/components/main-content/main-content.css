@@ -1,0 +1,11 @@
+.greybox {
+  background-color: #e5e5e5;
+  border-radius: 3px;
+  padding: 10px 5px;
+  padding-bottom: 20px;
+  color: grey;
+}
+.greybox-left-title {
+  display: flex;
+  justify-content: space-between;
+}

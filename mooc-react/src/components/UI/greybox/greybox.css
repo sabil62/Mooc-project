@@ -1,0 +1,29 @@
+.greybox {
+  background-color: #e5e5e5;
+  border-radius: 3px;
+  padding: 10px 5px;
+  padding-bottom: 20px;
+  color: rgb(110, 109, 109);
+}
+.greybox-up-title {
+  display: flex;
+  justify-content: space-between;
+}
+.greybox-left-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.greybox-right-title {
+  font-size: 14px;
+  padding-right: 10px;
+}
+.greybox-line {
+  height: 1px;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 2px;
+}
+.dark {
+  background-color: rgb(194, 194, 194);
+}
