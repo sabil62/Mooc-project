@@ -33,7 +33,7 @@
 .show-content {
   /* animation: showContent 3s ease-out; */
   animation-name: showContent;
-  animation-duration: 0.1s;
+  animation-duration: 0.16s;
   animation-timing-function: ease-in-out;
   padding: 10px;
   padding-top: 1px;
@@ -42,18 +42,31 @@
 
 @keyframes showContent {
   0% {
-    transform: translateY(-100%);
+    height: 0;
     opacity: 0;
-    /* transform: scaleY(0); */
-    /* height: 0; */
   }
-  80% {
-    opacity: 0.4;
+  /* make this height as minium as possible */
+  100% {
+    height: 100px;
+    opacity: 1;
+  }
+}
+
+.lost-content {
+  animation: lostContent 0.16s ease-in-out;
+  padding: 10px;
+  padding-top: 1px;
+  height: 0px;
+  transform: scale(0);
+}
+
+@keyframes lostContent {
+  0% {
+    height: 100px;
+    opacity: 0.5;
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
-    /* transform: scaleY(1); */
-    /* height: 100%; */
+    height: 0;
+    opacity: 0;
   }
 }

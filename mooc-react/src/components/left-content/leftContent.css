@@ -1,0 +1,5 @@
+.things-to-do {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2;
+}

@@ -31,7 +31,9 @@ class Greybox extends Component {
         </div>
         {this.state.downContent ? (
           <div className="show-content">{this.props.children}</div>
-        ) : null}
+        ) : (
+          <div className="lost-content">{this.props.children}</div>
+        )}
       </div>
     );
   }
