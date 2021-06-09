@@ -4,6 +4,17 @@ import "./rightContent.css";
 import LevelUpLogo from "../../assets/HCI/batches side/Level up.png";
 import Level from "../../assets/HCI/batches side/0 main number batch.png";
 import { InfoCircleFilled, TrophyFilled } from "@ant-design/icons";
+import Batch1 from "../../assets/HCI/batches side/VR Virtuoso.png";
+import Batch2 from "../../assets/HCI/batches side/Trail run leader.png";
+import Batch3 from "../../assets/HCI/batches side/Fable.png";
+import Batch4 from "../../assets/HCI/batches side/Canyon leader.png";
+import Batch5 from "../../assets/HCI/batches side/Fifty point batch.png";
+import Batch6 from "../../assets/HCI/batches side/Adventure awaits.png";
+import Batch7 from "../../assets/HCI/batches side/Honored.png";
+import Batch8 from "../../assets/HCI/batches side/VR hero.png";
+import Batch9 from "../../assets/HCI/batches side/panda.png";
+import Batch10 from "../../assets/HCI/batches side/Testing titan.png";
+import Batch11 from "../../assets/HCI/batches side/Participation of survey.png";
 
 const rightContent = (props) => {
   return (
@@ -62,9 +73,30 @@ const rightContent = (props) => {
         </div>
       </Greybox>
       <Greybox logo={LevelUpLogo} title={"Latest Batches"}>
-        tiger lion
-        <br />
-        leopard
+        <div className="batches">
+          <img src={Batch1} />
+          <span>VR Virtuoso</span>
+          <img src={Batch2} />
+          <span>Trail Runner Leader</span>
+          <img src={Batch3} />
+          <span>Fabled</span>
+          <img src={Batch4} />
+          <span>Canyon leader</span>
+          <img src={Batch5} />
+          <span>Fifty point batch</span>
+          <img src={Batch6} />
+          <span>Adventure awaits</span>
+          <img src={Batch7} />
+          <span>Honored</span>
+          <img src={Batch8} />
+          <span>VR hero</span>
+          <img src={Batch9} />
+          <span>Welcome</span>
+          <img src={Batch10} />
+          <span>Testing Titan</span>
+          <img src={Batch11} />
+          <span>Survey</span>
+        </div>
       </Greybox>
     </React.Fragment>
   );

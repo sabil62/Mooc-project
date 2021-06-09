@@ -38,3 +38,19 @@
   font-size: 10px;
   padding-bottom: 10px;
 }
+
+.batches {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.batches img {
+  height: 7rem;
+  margin: 0.5rem 0;
+}
+.batches span {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #af8021;
+}
