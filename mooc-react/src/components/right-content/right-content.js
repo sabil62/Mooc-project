@@ -3,7 +3,12 @@ import Greybox from "../UI/greybox/greybox";
 import "./rightContent.css";
 import LevelUpLogo from "../../assets/HCI/batches side/Level up.png";
 import Level from "../../assets/HCI/batches side/0 main number batch.png";
-import { InfoCircleFilled, TrophyFilled } from "@ant-design/icons";
+import {
+  InfoCircleFilled,
+  TrophyFilled,
+  RedEnvelopeFilled,
+  SearchOutlined,
+} from "@ant-design/icons";
 import Batch1 from "../../assets/HCI/batches side/VR Virtuoso.png";
 import Batch2 from "../../assets/HCI/batches side/Trail run leader.png";
 import Batch3 from "../../assets/HCI/batches side/Fable.png";
@@ -15,6 +20,8 @@ import Batch8 from "../../assets/HCI/batches side/VR hero.png";
 import Batch9 from "../../assets/HCI/batches side/panda.png";
 import Batch10 from "../../assets/HCI/batches side/Testing titan.png";
 import Batch11 from "../../assets/HCI/batches side/Participation of survey.png";
+import Notice from "../../assets/HCI/batches side/level.png";
+import Message from "../../assets/HCI/batches side/message.png";
 
 const rightContent = (props) => {
   return (
@@ -96,6 +103,47 @@ const rightContent = (props) => {
           <span>Testing Titan</span>
           <img src={Batch11} />
           <span>Survey</span>
+        </div>
+      </Greybox>
+      <Greybox logo={Notice} title={"Latest Announcement"}>
+        <div>
+          <div className="latest-announcement">
+            Discussion Activity For Week 3 added
+            <span>23 Jun, 3:28 Ashish Adhikari</span>
+          </div>
+          <div className="latest-announcement">
+            Greetings !!!
+            <span>23 Jun, 3:28 Sabil Shrestha</span>
+          </div>
+          <div className="latest-announcement">Older topics ...</div>
+        </div>
+      </Greybox>
+      <Greybox logo={LevelUpLogo} title="Notifications">
+        <div className="notifications">
+          Last: 22 Aug 2020 14:04:02
+          <RedEnvelopeFilled
+            style={{
+              fontSize: "1.7rem",
+              color: "#FFF8DC",
+              margin: "0.5rem 0",
+              textShadow: "1px 1px black",
+            }}
+          />
+          <span style={{ fontSize: "0.9rem", color: "#af8021" }}>
+            Personal Settings{" "}
+          </span>
+        </div>
+      </Greybox>
+      <Greybox logo={Message} title="Search Forums">
+        <div className="search-forum">
+          <div>
+            <input type="text" style={{ padding: "3px" }} />
+            <button className="green-button">Go</button>
+          </div>
+          <div>
+            Advanced Search
+            <SearchOutlined style={{ fontSize: "0.8rem", marginLeft: "8px" }} />
+          </div>
         </div>
       </Greybox>
     </React.Fragment>

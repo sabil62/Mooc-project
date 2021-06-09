@@ -54,3 +54,39 @@
   margin-top: 0;
   color: #af8021;
 }
+.latest-announcement {
+  font-size: 0.88rem;
+  color: #af8021;
+  margin: 0.4rem 0;
+  font-weight: 600;
+}
+
+.latest-announcement span {
+  display: block;
+  font-size: 0.84rem;
+  color: grey;
+  font-weight: 500;
+}
+.notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.search-forum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-forum div {
+  margin-bottom: 0.5rem;
+  color: #af8021;
+}
+.green-button {
+  background-color: #9ac957;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  margin-left: 6px;
+}
