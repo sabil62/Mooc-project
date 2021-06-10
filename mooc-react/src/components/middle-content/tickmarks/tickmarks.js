@@ -4,7 +4,10 @@ import "./tickmark.css";
 const tickmarks = (props) => {
   return (
     <div className="tickmarks">
-      <span>two</span>
+      <span>
+        <img src={props.logo} className="tick-image" />
+        <span>{props.title}</span>
+      </span>
       <label class="checkbox path">
         <input type="checkbox" />
         <svg viewBox="0 0 21 21">
