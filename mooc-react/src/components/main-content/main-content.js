@@ -3,6 +3,7 @@ import "./main-content.css";
 import "../left-content/left-content";
 import LeftContent from "../left-content/left-content";
 import RightContent from "../right-content/right-content";
+import MiddleContent from "../middle-content/middle-content";
 
 class MainContent extends Component {
   state = {
@@ -28,7 +29,9 @@ class MainContent extends Component {
           <div className="col-lg-3 col-sm-4 col-12">
             <LeftContent thingsTodo={this.state.thingsTodo} />
           </div>
-          <div className="col-lg-6 col-sm-8 col-12">tiger</div>
+          <div className="col-lg-6 col-sm-8 col-12">
+            <MiddleContent />
+          </div>
           <div className="col-lg-3 d-lg-block d-none">
             <RightContent courseModule={this.state.courseModule} />
           </div>

@@ -1,0 +1,7 @@
+.left-side-shift {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.font-small {
+  font-size: 0.85rem;
+}

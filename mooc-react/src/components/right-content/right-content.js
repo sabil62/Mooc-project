@@ -22,6 +22,7 @@ import Batch10 from "../../assets/HCI/batches side/Testing titan.png";
 import Batch11 from "../../assets/HCI/batches side/Participation of survey.png";
 import Notice from "../../assets/HCI/batches side/level.png";
 import Message from "../../assets/HCI/batches side/message.png";
+import Stash from "../../assets/HCI/all batches.png";
 
 const rightContent = (props) => {
   return (
@@ -145,6 +146,12 @@ const rightContent = (props) => {
             <SearchOutlined style={{ fontSize: "0.8rem", marginLeft: "8px" }} />
           </div>
         </div>
+      </Greybox>
+      <Greybox title="Stash" logo={LevelUpLogo}>
+        <img src={Stash} style={{ width: "100%" }} />
+      </Greybox>
+      <Greybox title="Learning Style Survey" logo={LevelUpLogo}>
+        <button className="green-button">Take Survey</button>
       </Greybox>
     </React.Fragment>
   );
