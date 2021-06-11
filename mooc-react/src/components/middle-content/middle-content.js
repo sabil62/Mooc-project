@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./middle-content.css";
 import Weekbox from "../UI/weekbox/weekbox";
+import Week from "../UI/week/week";
 import Tickmarks from "./tickmarks/tickmarks";
 import Hand from "../../assets/HCI/updated profile.png";
 import Pdf from "../../assets/HCI/PDF adobe.png";
@@ -42,6 +43,7 @@ class MiddleContent extends Component {
           <Tickmarks key={index} title={c.title} logo={c.picture} />
         ))}
         <Weekbox />
+        <Week />
       </React.Fragment>
     );
   }

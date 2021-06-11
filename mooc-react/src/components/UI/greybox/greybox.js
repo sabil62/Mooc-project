@@ -29,11 +29,13 @@ class Greybox extends Component {
           <div className="greybox-line"></div>
           <div className="greybox-line dark"></div>
         </div>
-        {this.state.downContent ? (
-          <div className="show-content">{this.props.children}</div>
-        ) : (
-          <div className="lost-content">{this.props.children}</div>
-        )}
+        <div style={{ overflow: "hidden" }}>
+          {this.state.downContent ? (
+            <div className="show-content">{this.props.children}</div>
+          ) : (
+            <div className="lost-content">{this.props.children}</div>
+          )}
+        </div>
       </div>
     );
   }

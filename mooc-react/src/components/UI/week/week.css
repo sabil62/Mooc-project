@@ -1,0 +1,41 @@
+.weekss {
+  overflow: hidden;
+}
+#week-checkbox {
+  /* appearance: none; */
+  /* or you can  */
+  /* position: absolute;
+  opacity: 0; */
+  /* or  */
+  transform: scale(1);
+}
+.week-label {
+  background-color: gainsboro;
+  border-radius: 5px;
+  border-left: 3.4px solid rgb(38, 168, 201);
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.week-label::after {
+  content: ">";
+  font-weight: 900;
+
+  transition: all 0.4s;
+}
+
+.week-content {
+  max-height: 0;
+  color: rgb(83, 4, 4);
+  /* vvi  */
+  overflow: hidden;
+  transition: all 0.6s;
+}
+#week-checkbox:checked ~ .week-content {
+  max-height: 100vh;
+}
+#week-checkbox:checked + .week-label::after {
+  transform: rotate(90deg);
+}
