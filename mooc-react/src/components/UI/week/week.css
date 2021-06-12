@@ -22,6 +22,7 @@
 .week-label::after {
   content: ">";
   font-weight: 900;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
   transition: all 0.4s;
 }

@@ -7,17 +7,10 @@ const week = (props) => {
       <input type="checkbox" id="week-checkbox" />
 
       <label className="week-label" for="week-checkbox">
-        Week 7
+        {props.title}
+        {props.allChecked ? "---------------" : null}
       </label>
-      <div className="week-content">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-        reiciendis! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Ipsum, reiciendis!Lorem ipsum dolor sit amet consectetur, adipisicing
-        elit. Ipsum, reiciendis!Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Ipsum, reiciendis!Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Ipsum, reiciendis!Lorem ipsum dolor sit
-        amet consectetur, adipisicing elit. Ipsum, reiciendis!
-      </div>
+      <div className="week-content">{props.children}</div>
     </div>
   );
 };
