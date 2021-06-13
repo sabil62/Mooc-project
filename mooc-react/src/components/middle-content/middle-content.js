@@ -42,6 +42,15 @@ class MiddleContent extends Component {
     ],
     week7points: false,
     week7totalpoints: 0,
+    week7Activities: [
+      { picture: Hand, title: "update your profile", point: 0 },
+      { picture: Pdf, title: "update your profile", point: 0 },
+      { picture: Hand, title: "update your profile", point: 0 },
+      { picture: Chat, title: "update your profile", point: 0 },
+      { picture: ILS, title: "update your profile", point: 0 },
+    ],
+    week7Activitiespoints: false,
+    week7Activitiestotalpoints: 0,
     week6: [
       { picture: Hand, title: "second", point: 0 },
       { picture: Pdf, title: "second", point: 0 },
@@ -74,6 +83,25 @@ class MiddleContent extends Component {
         </Week>
         <br />
         <br />
+        {/* -------------------week 7 activities----------------  */}
+        <Week
+          key={"week 7 Activities"}
+          title="Week 7 Activities"
+          allChecked={this.state.week7Activitiespoints}
+        >
+          {this.state.week7.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() =>
+                this.addPoints(this.state.week7Activities, index, 70)
+              }
+            />
+          ))}
+        </Week>
+        <br />
+        <br />
         {/*---------------------week 6--------------------- */}
         <Week key={"week 6"} title="Week 6" allChecked={this.state.week6points}>
           {this.state.week6.map((c, index) => (
@@ -100,6 +128,9 @@ class MiddleContent extends Component {
     if (weekNumber == 7) {
       this.setState({ week7: old });
       this.calculateTotalPoints(state, 7);
+    } else if (weekNumber == 70) {
+      this.setState({ week7Activities: old });
+      this.calculateTotalPoints(state, 70);
     } else if (weekNumber == 6) {
       this.setState({ week6: old });
       this.calculateTotalPoints(state, 6);
@@ -120,6 +151,13 @@ class MiddleContent extends Component {
         this.setState({ week7points: true });
       } else {
         this.setState({ week7points: false });
+      }
+    } else if (number == 70) {
+      this.setState({ week7Activitiestotalpoints: sum });
+      if (state.length == sum) {
+        this.setState({ week7Activitiespoints: true });
+      } else {
+        this.setState({ week7Activitiespoints: false });
       }
     } else if (number == 6) {
       this.setState({ week6totalpoints: sum });
