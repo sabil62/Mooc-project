@@ -1,44 +1,47 @@
-import React, { useState, useEffect } from "react";
-import "./week.css";
+// import React, { useState, useEffect } from "react";
+// import "./week.css";
 
 // function Week(props) {
 //   const [display, setDisplay] = useState(false);
 //   const onDisplay = () => {
 //     setDisplay((display) => !display);
 //   };
-//   useEffect(() => {
-//     console.log(display);
-//   }, [display]);
 //   return (
 //     <div className="weekss">
-//       {/* <input type="checkbox" id="week-checkbox" /> */}
-
-//       <label
-//         className="week-label"
-//         onClick={() => setDisplay((display) => !display)}
-//       >
+//       <div className="week-label" onClick={() => onDisplay()}>
 //         {props.title}
-//         {props.allChecked ? "---------------" : null}
-//       </label>
+//         {props.allChecked ? "+++++++" : null}
+//       </div>
 //       {display ? <div>{props.children}</div> : null}
 //     </div>
 //   );
 // }
 
-function Week(props) {
-  const [display, setDisplay] = useState(false);
+// export default Week;
+
+import React, { useState } from "react";
+import "./week.css";
+
+function WeekBoxs(props) {
+  const [display, setDisplay] = useState(true);
+
   const onDisplay = () => {
     setDisplay((display) => !display);
   };
+
   return (
     <div className="weekss">
       <div className="week-label" onClick={() => onDisplay()}>
         {props.title}
         {props.allChecked ? "+++++++" : null}
       </div>
-      {display ? <div>{props.children}</div> : null}
+      {display ? (
+        <div className="content-show">{props.children}</div>
+      ) : (
+        <div className="content-hide">{props.children}</div>
+      )}
     </div>
   );
 }
 
-export default Week;
+export default WeekBoxs;

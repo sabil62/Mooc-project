@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./middle-content.css";
-import Week from "../UI/week/week";
+import WeekBoxs from "../UI/week/week";
 import Tickmarks from "./tickmarks/tickmarks";
 import Hand from "../../assets/HCI/updated profile.png";
 import Pdf from "../../assets/HCI/PDF adobe.png";
@@ -71,7 +71,11 @@ class MiddleContent extends Component {
         <br />
         <br />
         {/* -------------------week 7----------------  */}
-        <Week key={"week 7"} title="Week 7" allChecked={this.state.week7points}>
+        <WeekBoxs
+          key={"week 7"}
+          title="Week 7"
+          allChecked={this.state.week7points}
+        >
           {this.state.week7.map((c, index) => (
             <Tickmarks
               key={index}
@@ -80,11 +84,11 @@ class MiddleContent extends Component {
               addPoint={() => this.addPoints(this.state.week7, index, 7)}
             />
           ))}
-        </Week>
+        </WeekBoxs>
         <br />
         <br />
         {/* -------------------week 7 activities----------------  */}
-        <Week
+        <WeekBoxs
           key={"week 7 Activities"}
           title="Week 7 Activities"
           allChecked={this.state.week7Activitiespoints}
@@ -99,11 +103,15 @@ class MiddleContent extends Component {
               }
             />
           ))}
-        </Week>
+        </WeekBoxs>
         <br />
         <br />
         {/*---------------------week 6--------------------- */}
-        <Week key={"week 6"} title="Week 6" allChecked={this.state.week6points}>
+        <WeekBoxs
+          key={"week 6"}
+          title="Week 6"
+          allChecked={this.state.week6points}
+        >
           {this.state.week6.map((c, index) => (
             <Tickmarks
               key={index}
@@ -112,13 +120,13 @@ class MiddleContent extends Component {
               addPoint={() => this.addPoints(this.state.week6, index, 6)}
             />
           ))}
-        </Week>
-        {console.log(this.state.week7[0].point)}
+        </WeekBoxs>
+        {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
 
         {console.log("totalpoints of 7 is", this.state.week7totalpoints)}
         {console.log("total points of 6 is ", this.state.week6totalpoints)}
-        {console.log(this.state.week6points)}
+        {console.log(this.state.week6points)} */}
       </React.Fragment>
     );
   }

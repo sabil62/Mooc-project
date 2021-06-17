@@ -19,7 +19,38 @@
   font-size: 1.4rem;
   font-weight: 700;
 }
-.week-label::after {
+.content-show {
+  animation: showContents 0.3s ease;
+  overflow: hidden;
+}
+.content-hide {
+  animation: hideContents 0.3s ease;
+  overflow: hidden;
+  height: 0;
+}
+
+@keyframes showContents {
+  0% {
+    height: 0;
+    /* opacity: 0; */
+  }
+  100% {
+    height: 200px;
+    /* opacity: 1; */
+  }
+}
+
+@keyframes hideContents {
+  0% {
+    height: 200px;
+    /* opacity: 1; */
+  }
+  100% {
+    height: 0px;
+    /* opacity: 0; */
+  }
+}
+/* .week-label::after {
   content: ">";
   font-weight: 900;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -29,9 +60,9 @@
 
 .week-content {
   max-height: 0;
-  color: rgb(83, 4, 4);
-  /* vvi  */
-  overflow: hidden;
+  color: rgb(83, 4, 4); */
+/* vvi  */
+/* overflow: hidden;
   transition: all 0.6s;
 }
 #week-checkbox:checked ~ .week-content {
@@ -39,4 +70,4 @@
 }
 #week-checkbox:checked + .week-label::after {
   transform: rotate(90deg);
-}
+} */

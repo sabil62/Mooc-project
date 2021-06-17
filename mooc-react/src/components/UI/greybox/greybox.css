@@ -57,6 +57,7 @@
   padding: 10px;
   padding-top: 1px;
   height: 0px;
+  /* no need for this  */
   transform: scale(0);
 }
 
