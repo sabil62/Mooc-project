@@ -9,6 +9,7 @@ import Chat from "../../assets/HCI/General chat rooms.png";
 import Discuss from "../../assets/HCI/Discussion.png";
 import ILS from "../../assets/HCI/ILS.png";
 import Sound from "../../assets/HCI/Sound or Forum.png";
+import Video from "../../assets/HCI/Video.png";
 
 class MiddleContent extends Component {
   state = {
@@ -43,12 +44,80 @@ class MiddleContent extends Component {
     week7points: false,
     week7totalpoints: 0,
     week7Activities: [
-      { picture: Hand, title: "update your profile", point: 0 },
-      { picture: Pdf, title: "update your profile", point: 0 },
-      { picture: Hand, title: "update your profile", point: 0 },
-      { picture: Chat, title: "update your profile", point: 0 },
-      { picture: ILS, title: "update your profile", point: 0 },
+      {
+        picture: Hand,
+        title: "Natural Lanuage as an Interface Style",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Command and Natural Lanuage Interaction",
+        point: 0,
+      },
+      { picture: Hand, title: "List of Command Line Commands", point: 0 },
+      {
+        picture: Chat,
+        title: "Natural Lanuage in Computer-Human Interaction",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "Natural Languate Processing: A Human-Computer Interaction Perspective",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title:
+          "Natural Languate Processing: A Human-Computer Interface to Database",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "NATURAL LANGUAGE COMPUTING: THE COMMERCIAL APPLICATIONS",
+        point: 0,
+      },
+      { picture: Pdf, title: "CPI Language", point: 0 },
+      { picture: Video, title: "Define: Natural Language Interface", point: 0 },
+      {
+        picture: Video,
+        title: "Natural Laguage Interface - Science Fiction",
+        point: 0,
+      },
+      { picture: Video, title: "Command Line Interface (CLI)", point: 0 },
+      {
+        picture: Video,
+        title: "Graphical User Interface (GUI) vs Command Line Interface (CLI)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "Windows Command Line Tutorial - 1 - Introduction to the Command Prompt",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "Windows Command Line Tutorial - 2 - Listing Files and Directories",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Windows Command Line Tutorial - 3 - Opening Files and History",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Windows Command Line Tutorial - Copying and Moving Files",
+        point: 0,
+      },
+      { picture: Video, title: "Simatic Manager:Symbol Editor", point: 0 },
+      { picture: Video, title: "Text Editors", point: 0 },
+      { picture: Discuss, title: "DISCUSSION FORUM WEEK 7", point: 0 },
+      { picture: Sound, title: "FEEDBACK OF WEEK 7", point: 0 },
     ],
+
     week7Activitiespoints: false,
     week7Activitiestotalpoints: 0,
     week6: [
@@ -93,7 +162,7 @@ class MiddleContent extends Component {
           title="Week 7 Activities"
           allChecked={this.state.week7Activitiespoints}
         >
-          {this.state.week7.map((c, index) => (
+          {this.state.week7Activities.map((c, index) => (
             <Tickmarks
               key={index}
               title={c.title}
@@ -121,6 +190,9 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
+        {console.log(this.state.week7Activitiespoints)}
+        {console.log(this.state.week7Activities[0].point)}
+
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
 
