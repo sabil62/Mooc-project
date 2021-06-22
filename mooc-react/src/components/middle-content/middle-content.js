@@ -10,6 +10,10 @@ import Discuss from "../../assets/HCI/Discussion.png";
 import ILS from "../../assets/HCI/ILS.png";
 import Sound from "../../assets/HCI/Sound or Forum.png";
 import Video from "../../assets/HCI/Video.png";
+import Earth from "../../assets/HCI/Earth file.png";
+import Main from "../../assets/HCI/Main front.png";
+import Quiz from "../../assets/HCI/quiz.png";
+import Document from "../../assets/HCI/additional questions.png";
 
 class MiddleContent extends Component {
   state = {
@@ -45,7 +49,7 @@ class MiddleContent extends Component {
     week7totalpoints: 0,
     week7Activities: [
       {
-        picture: Hand,
+        picture: Earth,
         title: "Natural Lanuage as an Interface Style",
         point: 0,
       },
@@ -54,9 +58,9 @@ class MiddleContent extends Component {
         title: "Command and Natural Lanuage Interaction",
         point: 0,
       },
-      { picture: Hand, title: "List of Command Line Commands", point: 0 },
+      { picture: Earth, title: "List of Command Line Commands", point: 0 },
       {
-        picture: Chat,
+        picture: Earth,
         title: "Natural Lanuage in Computer-Human Interaction",
         point: 0,
       },
@@ -121,14 +125,117 @@ class MiddleContent extends Component {
     week7Activitiespoints: false,
     week7Activitiestotalpoints: 0,
     week6: [
-      { picture: Hand, title: "second", point: 0 },
-      { picture: Pdf, title: "second", point: 0 },
-      { picture: Hand, title: "second", point: 0 },
-      { picture: Chat, title: "second", point: 0 },
-      { picture: ILS, title: "second", point: 0 },
+      {
+        picture: Main,
+        title: "Direct Manipulation and Virtual Environments",
+        point: 0,
+      },
+      {
+        picture: Main,
+        title:
+          "Direct Manipulation & User Control Interview with Ben Shneiderman",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "What are Virtual and Augmented Realities?",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "3D Web Design for Beginners - Webflow CSS tutorial",
+        point: 0,
+      },
+      { picture: Earth, title: "Direct Manipulation", point: 0 },
+      { picture: Earth, title: "3D User Interfaces", point: 0 },
+      { picture: Quiz, title: "Quiz | Week 6", point: 0 },
+      { picture: Document, title: "Additional Lesson", point: 0 },
     ],
     week6points: false,
     week6totalpoints: 0,
+    week6Activities: [
+      {
+        picture: Video,
+        title: "Meet the inventor of the electronic spreadsheet | Dan Bricklin",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "This Man Invented the World's First Video Game Console",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "A Brief History of Video Games",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "The First Video Game",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Your brain on video games | Daphne Bavelier",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Direct Manipulation - Example - How Do Self-driving cars SEE ?",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Chinese medical team completes 5G-enabled remote surgery test",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "The Future of Augmented Reality",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Direct Manipulation - Example - How Do Self-driving cars SEE ?",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Designing Screen Interfaces for VR (Google I/O '17)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Enabling 3D perspective - Webflow CSS tutorial",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "5G Prototyping Activities at Robotic Systems Lab - Teleoperation of ANYpulator over Mobile Networks",
+        point: 0,
+      },
+      {
+        picture: Document,
+        title: "Direct Manipulation Author: Michael Dennehy",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Object-action interface",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Augmented reality",
+        point: 0,
+      },
+
+      { picture: Discuss, title: "DISCUSSION FORUM WEEK 6", point: 0 },
+      { picture: Sound, title: "Your reflection on Week 6", point: 0 },
+    ],
+    week6ActivitiesPoints: false,
+    week6ActivitiesTotalPoints: 0,
   };
   render() {
     return (
@@ -137,8 +244,7 @@ class MiddleContent extends Component {
         {this.state.upper.map((c, index) => (
           <Tickmarks key={index} title={c.title} logo={c.picture} />
         ))}
-        <br />
-        <br />
+
         {/* -------------------week 7----------------  */}
         <WeekBoxs
           key={"week 7"}
@@ -154,8 +260,7 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
-        <br />
-        <br />
+
         {/* -------------------week 7 activities----------------  */}
         <WeekBoxs
           key={"week 7 Activities"}
@@ -173,8 +278,7 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
-        <br />
-        <br />
+
         {/*---------------------week 6--------------------- */}
         <WeekBoxs
           key={"week 6"}
@@ -190,8 +294,23 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
-        {console.log(this.state.week7Activitiespoints)}
-        {console.log(this.state.week7Activities[0].point)}
+        {/*---------------------week 6 Activities--------------------- */}
+        <WeekBoxs
+          key={"Week 6 Activities"}
+          title="Week 6 Activities"
+          allChecked={this.state.week6ActivitiesPoints}
+        >
+          {this.state.week6Activities.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() =>
+                this.addPoints(this.state.week6Activities, index, 60)
+              }
+            />
+          ))}
+        </WeekBoxs>
 
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
@@ -214,6 +333,9 @@ class MiddleContent extends Component {
     } else if (weekNumber == 6) {
       this.setState({ week6: old });
       this.calculateTotalPoints(state, 6);
+    } else if (weekNumber == 60) {
+      this.setState({ week6Activities: old });
+      this.calculateTotalPoints(state, 60);
     }
   };
   calculateTotalPoints = (state, number) => {
@@ -245,6 +367,13 @@ class MiddleContent extends Component {
         this.setState({ week6points: true });
       } else {
         this.setState({ week6points: false });
+      }
+    } else if (number == 60) {
+      this.setState({ week6ActivitiesTotalPoints: sum });
+      if (state.length == sum) {
+        this.setState({ week6ActivitiesPoints: true });
+      } else {
+        this.setState({ week6ActivitiesPoints: false });
       }
     }
   };
