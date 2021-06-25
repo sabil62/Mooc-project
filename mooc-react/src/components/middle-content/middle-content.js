@@ -39,11 +39,16 @@ class MiddleContent extends Component {
       { picture: Sound, title: "INTERNAL I Assignment Solution" },
     ],
     week7: [
-      { picture: Hand, title: "update your profile", point: 0 },
-      { picture: Pdf, title: "update your profile", point: 0 },
-      { picture: Hand, title: "update your profile", point: 0 },
-      { picture: Chat, title: "update your profile", point: 0 },
-      { picture: ILS, title: "update your profile", point: 0 },
+      { picture: Main, title: "Command and Natural Languages", point: 0 },
+      { picture: Video, title: "Natural Language Interface", point: 0 },
+      {
+        picture: Video,
+        title: "What is Command Line Interface / Graphical User Interface?",
+        point: 0,
+      },
+      { picture: Earth, title: "Command-line Interface", point: 0 },
+      { picture: Quiz, title: " Quiz | Week 7", point: 0 },
+      { picture: Document, title: " Additional Lesson", point: 0 },
     ],
     week7points: false,
     week7totalpoints: 0,
@@ -236,6 +241,126 @@ class MiddleContent extends Component {
     ],
     week6ActivitiesPoints: false,
     week6ActivitiesTotalPoints: 0,
+    week5: [
+      {
+        picture: Main,
+        title: "Evaluationg Interface Designs",
+        point: 0,
+      },
+      {
+        picture: Main,
+        title:
+          "Usability Testing: Complete Process | Usability Testing(in Hindi)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Heuristic Evaluation",
+        point: 0,
+      },
+      { picture: Video, title: "Prototypping and Paper Mock up", point: 0 },
+      {
+        picture: Video,
+        title:
+          "Enhancing qualitative research: the Retrospective Think-Aloud Interview (RTA)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Better User Research Through Surveys",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "What is User acceptance testing or UAT?",
+        point: 0,
+      },
+
+      {
+        picture: Quiz,
+        title: "Quiz | Week 5",
+        point: 0,
+      },
+      { picture: Document, title: "Additional Lesson", point: 0 },
+    ],
+    week5points: false,
+    week5totalpoints: 0,
+    week5Activities: [
+      {
+        picture: Earth,
+        title: "Natural Lanuage as an Interface Style",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Command and Natural Lanuage Interaction",
+        point: 0,
+      },
+      { picture: Earth, title: "List of Command Line Commands", point: 0 },
+      {
+        picture: Earth,
+        title: "Natural Lanuage in Computer-Human Interaction",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "Natural Languate Processing: A Human-Computer Interaction Perspective",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title:
+          "Natural Languate Processing: A Human-Computer Interface to Database",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "NATURAL LANGUAGE COMPUTING: THE COMMERCIAL APPLICATIONS",
+        point: 0,
+      },
+      { picture: Pdf, title: "CPI Language", point: 0 },
+      { picture: Video, title: "Define: Natural Language Interface", point: 0 },
+      {
+        picture: Video,
+        title: "Natural Laguage Interface - Science Fiction",
+        point: 0,
+      },
+      { picture: Video, title: "Command Line Interface (CLI)", point: 0 },
+      {
+        picture: Video,
+        title: "Graphical User Interface (GUI) vs Command Line Interface (CLI)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "Windows Command Line Tutorial - 1 - Introduction to the Command Prompt",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title:
+          "Windows Command Line Tutorial - 2 - Listing Files and Directories",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Windows Command Line Tutorial - 3 - Opening Files and History",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Windows Command Line Tutorial - Copying and Moving Files",
+        point: 0,
+      },
+      { picture: Video, title: "Simatic Manager:Symbol Editor", point: 0 },
+      { picture: Video, title: "Text Editors", point: 0 },
+      { picture: Discuss, title: "DISCUSSION FORUM WEEK 7", point: 0 },
+      { picture: Sound, title: "FEEDBACK OF WEEK 7", point: 0 },
+    ],
+    week5ActivitiesPoint: false,
+    week5ActivitiesTotalPoint: 0,
   };
   render() {
     return (
@@ -311,6 +436,21 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
+        {/*---------------------week 5--------------------- */}
+        <WeekBoxs
+          key={"Week 5"}
+          title="Week 5"
+          allChecked={this.state.week5points}
+        >
+          {this.state.week5.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() => this.addPoints(this.state.week5, index, 5)}
+            />
+          ))}
+        </WeekBoxs>
 
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
@@ -336,6 +476,9 @@ class MiddleContent extends Component {
     } else if (weekNumber == 60) {
       this.setState({ week6Activities: old });
       this.calculateTotalPoints(state, 60);
+    } else if (weekNumber == 5) {
+      this.setState({ week5: old });
+      this.calculateTotalPoints(state, 5);
     }
   };
   calculateTotalPoints = (state, number) => {
@@ -374,6 +517,13 @@ class MiddleContent extends Component {
         this.setState({ week6ActivitiesPoints: true });
       } else {
         this.setState({ week6ActivitiesPoints: false });
+      }
+    } else if (number == 5) {
+      this.setState({ week5totalpoints: sum });
+      if (state.length == sum) {
+        this.setState({ week5points: true });
+      } else {
+        this.setState({ week5points: false });
       }
     }
   };
