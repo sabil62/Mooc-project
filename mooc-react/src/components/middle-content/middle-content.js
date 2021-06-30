@@ -287,77 +287,130 @@ class MiddleContent extends Component {
     week5totalpoints: 0,
     week5Activities: [
       {
-        picture: Earth,
-        title: "Natural Lanuage as an Interface Style",
+        picture: Video,
+        title: "Design Thinking & Strategy - Good Kitchen Case Study",
         point: 0,
       },
       {
         picture: Video,
-        title: "Command and Natural Lanuage Interaction",
+        title: "Formative vs. Summative Evaluation",
         point: 0,
       },
-      { picture: Earth, title: "List of Command Line Commands", point: 0 },
+      { picture: Video, title: "Usability Labs", point: 0 },
       {
-        picture: Earth,
-        title: "Natural Lanuage in Computer-Human Interaction",
+        picture: Video,
+        title: "Website Usability Testing: The Thinking Aloud Protocaol",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: (
+          <span>
+            <span>
+              What is Heuristic Evaluataion in Web Design and UI Design (in
+              Hindi)
+            </span>
+            <div>
+              Bonus Video on{" "}
+              <a
+                href="
+              #"
+              >
+                Heuristic Evaluation
+              </a>{" "}
+              for a Badges and 50 points
+            </div>
+          </span>
+        ),
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Tips for good survey questions",
         point: 0,
       },
       {
         picture: Video,
         title:
-          "Natural Languate Processing: A Human-Computer Interaction Perspective",
+          "What is Eye Tracking and How it Works | Demon video by CoolTool",
         point: 0,
       },
+      {
+        picture: Video,
+        title: "Web Design Tutorial - 5 IMPORTANT Tips!",
+        point: 0,
+      },
+
       {
         picture: Pdf,
+        title: "Evaluation Techniques",
+        point: 0,
+      },
+      { picture: Earth, title: "Evaulation Techniques", point: 0 },
+      {
+        picture: Earth,
+        title: "10 Usability Heuristic for User Interface Design",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Automated tools - WebTango",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "How to Conduct a Cognitive Walkthrough",
+        point: 0,
+      },
+      {
+        picture: Earth,
         title:
-          "Natural Languate Processing: A Human-Computer Interface to Database",
+          "UX Design: Wireframe vs Storyboard vs Wireflow vs Mockup vs Prototyping",
         point: 0,
       },
       {
-        picture: Pdf,
-        title: "NATURAL LANGUAGE COMPUTING: THE COMMERCIAL APPLICATIONS",
+        picture: Earth,
+        title: "Types of Survey Questions",
         point: 0,
       },
-      { picture: Pdf, title: "CPI Language", point: 0 },
-      { picture: Video, title: "Define: Natural Language Interface", point: 0 },
+
+      { picture: Discuss, title: "DISCUSSION FORUM WEEK 5", point: 0 },
       {
-        picture: Video,
-        title: "Natural Laguage Interface - Science Fiction",
-        point: 0,
-      },
-      { picture: Video, title: "Command Line Interface (CLI)", point: 0 },
-      {
-        picture: Video,
-        title: "Graphical User Interface (GUI) vs Command Line Interface (CLI)",
-        point: 0,
-      },
-      {
-        picture: Video,
-        title:
-          "Windows Command Line Tutorial - 1 - Introduction to the Command Prompt",
+        picture: Sound,
+        title: (
+          <span>
+            COGNITIVE Walkthrough
+            <div></div>
+            Conduct a <strong>Cognitive Walkthrough</strong> of the MOOC system
+            which you are using for the course on{" "}
+            <a href="#">Human Computer Interaction !!!</a>
+          </span>
+        ),
         point: 0,
       },
       {
-        picture: Video,
-        title:
-          "Windows Command Line Tutorial - 2 - Listing Files and Directories",
+        picture: Sound,
+        title: (
+          <span>
+            Heuristic Evaluataion
+            <div></div>
+            Conduct a HEURISTIC EVALUATION based on Jakob Nielsen's 10 general
+            principles for interaction design of the MOOC system which you are
+            using for the course on Human Computer Interaction !!!
+          </span>
+        ),
         point: 0,
       },
       {
-        picture: Video,
-        title: "Windows Command Line Tutorial - 3 - Opening Files and History",
+        picture: Sound,
+        title: (
+          <span>
+            Your reflection of week 5<div></div>
+            Share your reflection !!!
+          </span>
+        ),
         point: 0,
       },
-      {
-        picture: Video,
-        title: "Windows Command Line Tutorial - Copying and Moving Files",
-        point: 0,
-      },
-      { picture: Video, title: "Simatic Manager:Symbol Editor", point: 0 },
-      { picture: Video, title: "Text Editors", point: 0 },
-      { picture: Discuss, title: "DISCUSSION FORUM WEEK 7", point: 0 },
-      { picture: Sound, title: "FEEDBACK OF WEEK 7", point: 0 },
     ],
     week5ActivitiesPoint: false,
     week5ActivitiesTotalPoint: 0,
@@ -451,6 +504,23 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
+        {/*---------------------week 5--------------------- */}
+        <WeekBoxs
+          key="Week 5 ac"
+          title="Week 5 Activities"
+          allChecked={this.state.week5ActivitiesPoint}
+        >
+          {this.state.week5Activities.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() =>
+                this.addPoints(this.state.week5Activities, index, 50)
+              }
+            />
+          ))}
+        </WeekBoxs>
 
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
@@ -479,6 +549,9 @@ class MiddleContent extends Component {
     } else if (weekNumber == 5) {
       this.setState({ week5: old });
       this.calculateTotalPoints(state, 5);
+    } else if (weekNumber == 50) {
+      this.setState({ week5Activities: old });
+      this.calculateTotalPoints(state, 50);
     }
   };
   calculateTotalPoints = (state, number) => {
@@ -524,6 +597,13 @@ class MiddleContent extends Component {
         this.setState({ week5points: true });
       } else {
         this.setState({ week5points: false });
+      }
+    } else if (number == 50) {
+      this.setState({ week5ActivitiesTotalPoint: sum });
+      if (state.length == sum) {
+        this.setState({ week5ActivitiesPoint: true });
+      } else {
+        this.setState({ week5ActivitiesPoint: false });
       }
     }
   };
