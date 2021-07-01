@@ -414,6 +414,50 @@ class MiddleContent extends Component {
     ],
     week5ActivitiesPoint: false,
     week5ActivitiesTotalPoint: 0,
+    week4: [
+      {
+        picture: Main,
+        title: "Managing Design Process",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Four Pillars of Design",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Creating Personas Is Like Sorting Rocks",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "What is Ethnography in User Research?",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Participant Observation",
+        point: 0,
+      },
+      {
+        picture: Document,
+        title: "Personas",
+        point: 0,
+      },
+      {
+        picture: Quiz,
+        title: "Quiz | Week 4",
+        point: 0,
+      },
+      {
+        picture: Document,
+        title: "Additional Lesson",
+        point: 0,
+      },
+    ],
+    week4totalpoints: 0,
+    week4points: false,
   };
   render() {
     return (
@@ -521,6 +565,21 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
+        {/*---------------------week 4--------------------- */}
+        <WeekBoxs
+          key="Week 4 ac"
+          title="Week 4"
+          allChecked={this.state.week4points}
+        >
+          {this.state.week4.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() => this.addPoints(this.state.week4, index, 4)}
+            />
+          ))}
+        </WeekBoxs>
 
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
@@ -552,6 +611,9 @@ class MiddleContent extends Component {
     } else if (weekNumber == 50) {
       this.setState({ week5Activities: old });
       this.calculateTotalPoints(state, 50);
+    } else if (weekNumber == 4) {
+      this.setState({ week4: old });
+      this.calculateTotalPoints(state, 4);
     }
   };
   calculateTotalPoints = (state, number) => {
@@ -604,6 +666,13 @@ class MiddleContent extends Component {
         this.setState({ week5ActivitiesPoint: true });
       } else {
         this.setState({ week5ActivitiesPoint: false });
+      }
+    } else if (number == 4) {
+      this.setState({ week4totalpoints: sum });
+      if (state.length == sum) {
+        this.setState({ week4points: true });
+      } else {
+        this.setState({ week4points: false });
       }
     }
   };
