@@ -458,6 +458,122 @@ class MiddleContent extends Component {
     ],
     week4totalpoints: 0,
     week4points: false,
+    week4Activities: [
+      {
+        picture: Video,
+        title: "How To Manage Design Projects",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "UX Prototyping Tools: How to Pick the Right One (2020)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Design & Copyright - Making sure your work is legal",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Expert Design Review",
+        point: 0,
+      },
+
+      {
+        picture: Video,
+        title: "Ethnography: Ellen Isaas",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "How To Create A User Persona",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "More Example on Persona: How To Create A User Persona",
+        point: 0,
+      },
+
+      {
+        picture: Video,
+        title: "How to Create a UX Storyboard",
+        point: 0,
+      },
+      { picture: Video, title: "User Scenario to App Design", point: 0 },
+      {
+        picture: Video,
+        title:
+          "Scenario planning - the future of work and place | Oliver Baxter | TEDxALC",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "When to Use Which UX Research Method",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "UX Expert Reviews",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Using Ethnography methods & participant observation",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title:
+          "Coca-Cola suspends social media advertising despite Facebook changesURL",
+        point: 0,
+      },
+
+      {
+        picture: Discuss,
+        title: "Socio-organizational issures and stakeholdder requirements",
+        point: 0,
+      },
+      {
+        picture: Sound,
+        title: (
+          <span>
+            COGNITIVE Walkthrough
+            <div></div>
+            Conduct a <strong>Cognitive Walkthrough</strong> of the MOOC system
+            which you are using for the course on{" "}
+            <a href="#">Human Computer Interaction !!!</a>
+          </span>
+        ),
+        point: 0,
+      },
+      {
+        picture: Sound,
+        title: (
+          <span>
+            Heuristic Evaluataion
+            <div></div>
+            Conduct a HEURISTIC EVALUATION based on Jakob Nielsen's 10 general
+            principles for interaction design of the MOOC system which you are
+            using for the course on Human Computer Interaction !!!
+          </span>
+        ),
+        point: 0,
+      },
+      {
+        picture: Sound,
+        title: (
+          <span>
+            Your reflection of week 5<div></div>
+            Share your reflection !!!
+          </span>
+        ),
+        point: 0,
+      },
+    ],
+    week4ActivitiesPoints: false,
+    week4ActivitiesTotalPoints: 0,
   };
   render() {
     return (
