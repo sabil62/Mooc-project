@@ -574,6 +574,48 @@ class MiddleContent extends Component {
     ],
     week4ActivitiesPoints: false,
     week4ActivitiesTotalPoints: 0,
+    week3: [
+      {
+        picture: Main,
+        title: "Managing Design Process",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Four Pillars of Design",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Creating Personas Is Like Sorting Rocks",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "What is Ethnography in User Research?",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Participant Observation",
+        point: 0,
+      },
+      {
+        picture: Document,
+        title: "Personas",
+        point: 0,
+      },
+      {
+        picture: Quiz,
+        title: "Quiz | Week 4",
+        point: 0,
+      },
+      {
+        picture: Document,
+        title: "Additional Lesson",
+        point: 0,
+      },
+    ],
   };
   render() {
     return (
