@@ -14,6 +14,7 @@ import Earth from "../../assets/HCI/Earth file.png";
 import Main from "../../assets/HCI/Main front.png";
 import Quiz from "../../assets/HCI/quiz.png";
 import Document from "../../assets/HCI/additional questions.png";
+import Switch from "react-bootstrap/esm/Switch";
 
 class MiddleContent extends Component {
   state = {
@@ -577,23 +578,38 @@ class MiddleContent extends Component {
     week3: [
       {
         picture: Main,
-        title: "",
-        point: 0,
+        title: "Guideliness and Principles",
+        pos: 1,
       },
       {
         picture: Main,
-        title: "",
-        point: 00,
+        title: "Theories",
+        pos: 1,
       },
       {
         picture: Main,
-        title: "",
-        point: 00,
+        title: "Shneiderman's Eight Golden Rules",
+        pos: 1,
       },
       {
         picture: Main,
-        title: "",
-        point: 00,
+        title: "Error Prevention",
+        pos: 1,
+      },
+      {
+        picture: Main,
+        title: "Norman's Seven Principles",
+        pos: 1,
+      },
+      {
+        picture: Main,
+        title: "GOMS MODEL in HCI",
+        pos: 1,
+      },
+      {
+        picture: Main,
+        title: "Minimize Memory Load",
+        pos: 1,
       },
     ],
   };
@@ -705,7 +721,7 @@ class MiddleContent extends Component {
         </WeekBoxs>
         {/*---------------------week 4--------------------- */}
         <WeekBoxs
-          key="Week 4 ac"
+          key="Week 4"
           title="Week 4"
           allChecked={this.state.week4points}
         >
@@ -715,6 +731,23 @@ class MiddleContent extends Component {
               title={c.title}
               logo={c.picture}
               addPoint={() => this.addPoints(this.state.week4, index, 4)}
+            />
+          ))}
+        </WeekBoxs>
+        {/*---------------------week 4 Acitivies--------------------- */}
+        <WeekBoxs
+          key="Week 4 activ"
+          title="Week 4 Activities"
+          allChecked={this.state.week4ActivitiesPoints}
+        >
+          {this.state.week4Activities.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() =>
+                this.addPoints(this.state.week4Activities, index, 40)
+              }
             />
           ))}
         </WeekBoxs>
@@ -731,27 +764,41 @@ class MiddleContent extends Component {
   addPoints = (state, index, weekNumber) => {
     const old = [...state];
     old[index].point++;
-    if (weekNumber == 7) {
-      this.setState({ week7: old });
-      this.calculateTotalPoints(state, 7);
-    } else if (weekNumber == 70) {
-      this.setState({ week7Activities: old });
-      this.calculateTotalPoints(state, 70);
-    } else if (weekNumber == 6) {
-      this.setState({ week6: old });
-      this.calculateTotalPoints(state, 6);
-    } else if (weekNumber == 60) {
-      this.setState({ week6Activities: old });
-      this.calculateTotalPoints(state, 60);
-    } else if (weekNumber == 5) {
-      this.setState({ week5: old });
-      this.calculateTotalPoints(state, 5);
-    } else if (weekNumber == 50) {
-      this.setState({ week5Activities: old });
-      this.calculateTotalPoints(state, 50);
-    } else if (weekNumber == 4) {
-      this.setState({ week4: old });
-      this.calculateTotalPoints(state, 4);
+    switch (weekNumber) {
+      case 7:
+        this.setState({ week7: old });
+        this.calculateTotalPoints(state, 7);
+        break;
+      case 70:
+        this.setState({ week7Activities: old });
+        this.calculateTotalPoints(state, 70);
+        break;
+      case 6:
+        this.setState({ week6: old });
+        this.calculateTotalPoints(state, 6);
+        break;
+      case 60:
+        this.setState({ week6Activities: old });
+        this.calculateTotalPoints(state, 60);
+        break;
+      case 5:
+        this.setState({ week5: old });
+        this.calculateTotalPoints(state, 5);
+        break;
+      case 50:
+        this.setState({ week5Activities: old });
+        this.calculateTotalPoints(state, 50);
+        break;
+      case 4:
+        this.setState({ week4: old });
+        this.calculateTotalPoints(state, 4);
+        break;
+      case 40:
+        this.setState({ week4ActivitiesTotalPoints: old });
+        this.calculateTotalPoints(state, 40);
+
+      default:
+        break;
     }
   };
   calculateTotalPoints = (state, number) => {
@@ -762,56 +809,84 @@ class MiddleContent extends Component {
       }
       sum = sum + c.point;
     });
+    switch (number) {
+      case 7:
+        this.setState({ week7totalpoints: sum });
+        //to check whether all boxes are ticked
+        if (state.length == sum) {
+          this.setState({ week7points: true });
+        } else {
+          this.setState({ week7points: false });
+        }
+        break;
+      case 70:
+        this.setState({ week7Activitiestotalpoints: sum });
+        if (state.length == sum) {
+          this.setState({ week7Activitiespoints: true });
+        } else {
+          this.setState({ week7Activitiespoints: false });
+        }
+        break;
+      case 6:
+        this.setState({ week6totalpoints: sum });
+        if (state.length == sum) {
+          this.setState({ week6points: true });
+        } else {
+          this.setState({ week6points: false });
+        }
+        break;
+      case 60:
+        this.setState({ week6ActivitiesTotalPoints: sum });
+        if (state.length == sum) {
+          this.setState({ week6ActivitiesPoints: true });
+        } else {
+          this.setState({ week6ActivitiesPoints: false });
+        }
+        break;
+      case 5:
+        this.setState({ week5totalpoints: sum });
+        if (state.length == sum) {
+          this.setState({ week5points: true });
+        } else {
+          this.setState({ week5points: false });
+        }
+        break;
+      case 50:
+        this.setState({ week5ActivitiesTotalPoint: sum });
+        if (state.length == sum) {
+          this.setState({ week5ActivitiesPoint: true });
+        } else {
+          this.setState({ week5ActivitiesPoint: false });
+        }
+        break;
+      case 4:
+        this.setState({ week4totalpoints: sum });
+        if (state.length == sum) {
+          this.setState({ week4points: true });
+        } else {
+          this.setState({ week4points: false });
+        }
+        break;
+      case 40:
+        this.setState({ week4ActivitiesTotalPoints: sum });
+        if (state.length == sum) {
+          this.setState({ week4ActivitiesPoints: true });
+        } else {
+          this.setState({ week4ActivitiesPoints: false });
+        }
+
+        break;
+
+      default:
+        break;
+    }
     if (number == 7) {
-      this.setState({ week7totalpoints: sum });
-      //to check whether all boxes are ticked
-      if (state.length == sum) {
-        this.setState({ week7points: true });
-      } else {
-        this.setState({ week7points: false });
-      }
     } else if (number == 70) {
-      this.setState({ week7Activitiestotalpoints: sum });
-      if (state.length == sum) {
-        this.setState({ week7Activitiespoints: true });
-      } else {
-        this.setState({ week7Activitiespoints: false });
-      }
     } else if (number == 6) {
-      this.setState({ week6totalpoints: sum });
-      if (state.length == sum) {
-        this.setState({ week6points: true });
-      } else {
-        this.setState({ week6points: false });
-      }
     } else if (number == 60) {
-      this.setState({ week6ActivitiesTotalPoints: sum });
-      if (state.length == sum) {
-        this.setState({ week6ActivitiesPoints: true });
-      } else {
-        this.setState({ week6ActivitiesPoints: false });
-      }
     } else if (number == 5) {
-      this.setState({ week5totalpoints: sum });
-      if (state.length == sum) {
-        this.setState({ week5points: true });
-      } else {
-        this.setState({ week5points: false });
-      }
     } else if (number == 50) {
-      this.setState({ week5ActivitiesTotalPoint: sum });
-      if (state.length == sum) {
-        this.setState({ week5ActivitiesPoint: true });
-      } else {
-        this.setState({ week5ActivitiesPoint: false });
-      }
     } else if (number == 4) {
-      this.setState({ week4totalpoints: sum });
-      if (state.length == sum) {
-        this.setState({ week4points: true });
-      } else {
-        this.setState({ week4points: false });
-      }
     }
   };
 }
