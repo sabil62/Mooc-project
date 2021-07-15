@@ -573,8 +573,9 @@ class MiddleContent extends Component {
         point: 0,
       },
     ],
-    week4ActivitiesPoints: false,
+
     week4ActivitiesTotalPoints: 0,
+    week4ActivitiesPoints: false,
     week3: [
       {
         picture: Main,
@@ -632,6 +633,8 @@ class MiddleContent extends Component {
         point: 0,
       },
     ],
+    week3Points: false,
+    week3TotalPoints: 0,
   };
   render() {
     return (
@@ -771,6 +774,21 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
+        {/*---------------------week 3--------------------- */}
+        <WeekBoxs
+          key="Week 3"
+          title="Week 3"
+          allChecked={this.state.week3points}
+        >
+          {this.state.week3.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() => this.addPoints(this.state.week3, index, 3)}
+            />
+          ))}
+        </WeekBoxs>
 
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
@@ -783,7 +801,11 @@ class MiddleContent extends Component {
   }
   addPoints = (state, index, weekNumber) => {
     const old = [...state];
-    old[index].point++;
+    //this code makes point 0 or 1(>= is vvi not >)
+    old[index].point >= 1 ? old[index].point-- : old[index].point++;
+    // old[index].point++;
+    console.log(old[index].point);
+
     switch (weekNumber) {
       case 7:
         this.setState({ week7: old });
@@ -814,8 +836,13 @@ class MiddleContent extends Component {
         this.calculateTotalPoints(state, 4);
         break;
       case 40:
-        this.setState({ week4ActivitiesTotalPoints: old });
+        this.setState({ week4Activities: old });
         this.calculateTotalPoints(state, 40);
+        break;
+      case 3:
+        this.setState({ week3: old });
+        this.calculateTotalPoints(state, 3);
+        break;
 
       default:
         break;
@@ -824,14 +851,17 @@ class MiddleContent extends Component {
   calculateTotalPoints = (state, number) => {
     let sum = 0;
     state.map((c) => {
-      if (c.point > 1) {
-        c.point = 0;
-      }
+      // old[index].point > 1 ? old[index].point-- : old[index].point++;
+      // The above code is of previous function line which eliminates the need of below code
+      // if (c.point > 1) {
+      //   c.point = 0;
+      // }
       sum = sum + c.point;
     });
+    // console.log(sum);
     switch (number) {
       case 7:
-        this.setState({ week7totalpoints: sum });
+        // this.setState({ week7totalpoints: sum });
         //to check whether all boxes are ticked
         if (state.length == sum) {
           this.setState({ week7points: true });
@@ -896,17 +926,17 @@ class MiddleContent extends Component {
         }
 
         break;
+      case 3:
+        // this.setState({ week3TotalPoints: sum });
+        if (state.length == sum) {
+          this.setState({ week3points: true });
+        } else {
+          this.setState({ week3points: false });
+        }
+        break;
 
       default:
         break;
-    }
-    if (number == 7) {
-    } else if (number == 70) {
-    } else if (number == 6) {
-    } else if (number == 60) {
-    } else if (number == 5) {
-    } else if (number == 50) {
-    } else if (number == 4) {
     }
   };
 }
