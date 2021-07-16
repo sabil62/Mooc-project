@@ -870,7 +870,6 @@ class MiddleContent extends Component {
         }
         break;
       case 70:
-        this.setState({ week7Activitiestotalpoints: sum });
         if (state.length == sum) {
           this.setState({ week7Activitiespoints: true });
         } else {
@@ -878,7 +877,6 @@ class MiddleContent extends Component {
         }
         break;
       case 6:
-        this.setState({ week6totalpoints: sum });
         if (state.length == sum) {
           this.setState({ week6points: true });
         } else {
@@ -886,7 +884,6 @@ class MiddleContent extends Component {
         }
         break;
       case 60:
-        this.setState({ week6ActivitiesTotalPoints: sum });
         if (state.length == sum) {
           this.setState({ week6ActivitiesPoints: true });
         } else {
@@ -894,7 +891,6 @@ class MiddleContent extends Component {
         }
         break;
       case 5:
-        this.setState({ week5totalpoints: sum });
         if (state.length == sum) {
           this.setState({ week5points: true });
         } else {
@@ -902,7 +898,6 @@ class MiddleContent extends Component {
         }
         break;
       case 50:
-        this.setState({ week5ActivitiesTotalPoint: sum });
         if (state.length == sum) {
           this.setState({ week5ActivitiesPoint: true });
         } else {
@@ -910,7 +905,6 @@ class MiddleContent extends Component {
         }
         break;
       case 4:
-        this.setState({ week4totalpoints: sum });
         if (state.length == sum) {
           this.setState({ week4points: true });
         } else {
@@ -918,7 +912,6 @@ class MiddleContent extends Component {
         }
         break;
       case 40:
-        this.setState({ week4ActivitiesTotalPoints: sum });
         if (state.length == sum) {
           this.setState({ week4ActivitiesPoints: true });
         } else {
@@ -927,7 +920,6 @@ class MiddleContent extends Component {
 
         break;
       case 3:
-        // this.setState({ week3TotalPoints: sum });
         if (state.length == sum) {
           this.setState({ week3points: true });
         } else {
