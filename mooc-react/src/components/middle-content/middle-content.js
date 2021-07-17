@@ -14,7 +14,6 @@ import Earth from "../../assets/HCI/Earth file.png";
 import Main from "../../assets/HCI/Main front.png";
 import Quiz from "../../assets/HCI/quiz.png";
 import Document from "../../assets/HCI/additional questions.png";
-import Switch from "react-bootstrap/esm/Switch";
 
 class MiddleContent extends Component {
   state = {
@@ -52,7 +51,7 @@ class MiddleContent extends Component {
       { picture: Document, title: " Additional Lesson", point: 0 },
     ],
     week7points: false,
-    week7totalpoints: 0,
+
     week7Activities: [
       {
         picture: Earth,
@@ -129,7 +128,7 @@ class MiddleContent extends Component {
     ],
 
     week7Activitiespoints: false,
-    week7Activitiestotalpoints: 0,
+
     week6: [
       {
         picture: Main,
@@ -158,7 +157,7 @@ class MiddleContent extends Component {
       { picture: Document, title: "Additional Lesson", point: 0 },
     ],
     week6points: false,
-    week6totalpoints: 0,
+
     week6Activities: [
       {
         picture: Video,
@@ -241,7 +240,7 @@ class MiddleContent extends Component {
       { picture: Sound, title: "Your reflection on Week 6", point: 0 },
     ],
     week6ActivitiesPoints: false,
-    week6ActivitiesTotalPoints: 0,
+
     week5: [
       {
         picture: Main,
@@ -285,7 +284,7 @@ class MiddleContent extends Component {
       { picture: Document, title: "Additional Lesson", point: 0 },
     ],
     week5points: false,
-    week5totalpoints: 0,
+
     week5Activities: [
       {
         picture: Video,
@@ -414,7 +413,7 @@ class MiddleContent extends Component {
       },
     ],
     week5ActivitiesPoint: false,
-    week5ActivitiesTotalPoint: 0,
+
     week4: [
       {
         picture: Main,
@@ -457,7 +456,7 @@ class MiddleContent extends Component {
         point: 0,
       },
     ],
-    week4totalpoints: 0,
+
     week4points: false,
     week4Activities: [
       {
@@ -574,7 +573,6 @@ class MiddleContent extends Component {
       },
     ],
 
-    week4ActivitiesTotalPoints: 0,
     week4ActivitiesPoints: false,
     week3: [
       {
@@ -634,7 +632,6 @@ class MiddleContent extends Component {
       },
     ],
     week3Points: false,
-    week3TotalPoints: 0,
   };
   render() {
     return (
