@@ -632,6 +632,85 @@ class MiddleContent extends Component {
       },
     ],
     week3Points: false,
+    week3Activities: [
+      {
+        picture: Video,
+        title: "How To Manage Design Projects",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "UX Prototyping Tools: How to Pick the Right One (2020)",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Design & Copyright - Making sure your work is legal",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Expert Design Review",
+        point: 0,
+      },
+
+      {
+        picture: Video,
+        title: "Ethnography: Ellen Isaas",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "How To Create A User Persona",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "More Example on Persona: How To Create A User Persona",
+        point: 0,
+      },
+
+      {
+        picture: Video,
+        title: "How to Create a UX Storyboard",
+        point: 0,
+      },
+      { picture: Video, title: "User Scenario to App Design", point: 0 },
+      {
+        picture: Video,
+        title:
+          "Scenario planning - the future of work and place | Oliver Baxter | TEDxALC",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "When to Use Which UX Research Method",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "UX Expert Reviews",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Using Ethnography methods & participant observation",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title:
+          "Coca-Cola suspends social media advertising despite Facebook changesURL",
+        point: 0,
+      },
+
+      {
+        picture: Discuss,
+        title: "Socio-organizational issures and stakeholdder requirements",
+        point: 0,
+      },
+    ],
+    week3ActivitiesPoints: false,
   };
   render() {
     return (
@@ -783,6 +862,23 @@ class MiddleContent extends Component {
               title={c.title}
               logo={c.picture}
               addPoint={() => this.addPoints(this.state.week3, index, 3)}
+            />
+          ))}
+        </WeekBoxs>
+        {/*---------------------week 3 Activities--------------------- */}
+        <WeekBoxs
+          key="Week 3 Activities"
+          title="Week 3 Activities"
+          allChecked={this.state.week3ActivitiesPoints}
+        >
+          {this.state.week3Activities.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() =>
+                this.addPoints(this.state.week3Activities, index, 30)
+              }
             />
           ))}
         </WeekBoxs>
