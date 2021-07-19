@@ -635,78 +635,121 @@ class MiddleContent extends Component {
     week3Activities: [
       {
         picture: Video,
-        title: "How To Manage Design Projects",
+        title: "Recognition vs. Recall in User Interfaces",
         point: 0,
       },
       {
         picture: Video,
-        title: "UX Prototyping Tools: How to Pick the Right One (2020)",
+        title: "Material makes it possible",
         point: 0,
       },
       {
         picture: Video,
-        title: "Design & Copyright - Making sure your work is legal",
+        title: "Information Foraging",
         point: 0,
       },
       {
         picture: Video,
-        title: "Expert Design Review",
+        title: "Example: Seven Stages of Action by Don Norman",
         point: 0,
       },
 
       {
         picture: Video,
-        title: "Ethnography: Ellen Isaas",
+        title: "Navigating the User UI Design to Follow",
         point: 0,
       },
       {
         picture: Video,
-        title: "How To Create A User Persona",
+        title: "I/0 Rules of Good UI Design to Follow",
         point: 0,
       },
       {
         picture: Video,
-        title: "More Example on Persona: How To Create A User Persona",
+        title: "Brain-Computer Interfaces Helping People with Disabilities",
         point: 0,
       },
 
-      {
-        picture: Video,
-        title: "How to Create a UX Storyboard",
-        point: 0,
-      },
-      { picture: Video, title: "User Scenario to App Design", point: 0 },
       {
         picture: Video,
         title:
-          "Scenario planning - the future of work and place | Oliver Baxter | TEDxALC",
+          "Byron Yu: Brain Computer Interfaces Helping People with Disabilities",
         point: 0,
       },
       {
         picture: Video,
-        title: "When to Use Which UX Research Method",
-        point: 0,
-      },
-      {
-        picture: Earth,
-        title: "UX Expert Reviews",
-        point: 0,
-      },
-      {
-        picture: Earth,
-        title: "Using Ethnography methods & participant observation",
-        point: 0,
-      },
-      {
-        picture: Earth,
-        title:
-          "Coca-Cola suspends social media advertising despite Facebook changesURL",
+        title: "Blind People can 'See' Facebook by Artificial Intelligence",
         point: 0,
       },
 
+      {
+        picture: Earth,
+        title: "8 Golden Rules for Better Interface Design",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Use unique and descriptive headaings",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Google Material Design Overview",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Apple Human Interface Guideliness",
+        point: 0,
+      },
+      {
+        picture: Earth,
+        title: "Information scent",
+        point: 0,
+      },
+      {
+        picture: Document,
+        title: "URL | Interaction styles",
+        point: 0,
+      },
+
+      {
+        picture: Pdf,
+        title: "GOMS and the Keystroke-Level Model",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "Standardize task sequences",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "Embed the link",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "Use check boxes for binary choices",
+        point: 0,
+      },
       {
         picture: Discuss,
-        title: "Socio-organizational issures and stakeholdder requirements",
+        title: "DISCUSSION FORUM WEEK 3",
+        point: 0,
+      },
+      {
+        picture: Sound,
+        title: (
+          <div>
+            FEEDBACK OF WEEK 3
+            <br />
+            Please write clear and concise feedback to you instructor.
+            <br />
+            THis feedback will not be public, you can send your feedback a tany
+            time to the instructor without any hesitation!
+          </div>
+        ),
         point: 0,
       },
     ],
@@ -936,6 +979,10 @@ class MiddleContent extends Component {
         this.setState({ week3: old });
         this.calculateTotalPoints(state, 3);
         break;
+      case 30:
+        this.setState({ week3Activities: old });
+        this.calculateTotalPoints(state, 30);
+        break;
 
       default:
         break;
@@ -1017,6 +1064,13 @@ class MiddleContent extends Component {
           this.setState({ week3points: true });
         } else {
           this.setState({ week3points: false });
+        }
+        break;
+      case 30:
+        if (state.length == sum) {
+          this.setState({ week3Activities: true });
+        } else {
+          this.setState({ week3Activities: false });
         }
         break;
 
