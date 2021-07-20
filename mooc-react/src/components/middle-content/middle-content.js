@@ -754,6 +754,128 @@ class MiddleContent extends Component {
       },
     ],
     week3ActivitiesPoints: false,
+    week2: [
+      {
+        picture: Video,
+        title: "Recognition vs. Recall in User Interfaces",
+        pntsnt: 2,
+      },
+      {
+        picture: Video,
+        title: "Material makes it possible",
+        pntsnt: 2,
+      },
+      {
+        picture: Video,
+        title: "Information Foraging",
+        pntsnt: 2,
+      },
+      {
+        picture: Video,
+        title: "Example: Seven Stages of Action by Don Norman",
+        pntsnt: 2,
+      },
+
+      {
+        picture: Video,
+        title: "Navigating the User UI Design to Follow",
+        pntsnt: 2,
+      },
+      {
+        picture: Video,
+        title: "I/0 Rules of Good UI Design to Follow",
+        pntsnt: 2,
+      },
+      {
+        picture: Video,
+        title: "Brain-Computer Interfaces Helping People with Disabilities",
+        pntsnt: 2,
+      },
+
+      {
+        picture: Video,
+        title:
+          "Byron Yu: Brain Computer Interfaces Helping People with Disabilities",
+        pntsnt: 2,
+      },
+      {
+        picture: Video,
+        title: "Blind People can 'See' Facebook by Artificial Intelligence",
+        pntsnt: 2,
+      },
+
+      {
+        picture: Earth,
+        title: "8 Golden Rules for Better Interface Design",
+        pntsnt: 2,
+      },
+      {
+        picture: Earth,
+        title: "Use unique and descriptive headaings",
+        pntsnt: 2,
+      },
+      {
+        picture: Earth,
+        title: "Google Material Design Overview",
+        pntsnt: 2,
+      },
+      {
+        picture: Earth,
+        title: "Apple Human Interface Guideliness",
+        pntsnt: 2,
+      },
+      {
+        picture: Earth,
+        title: "Information scent",
+        pntsnt: 2,
+      },
+      {
+        picture: Document,
+        title: "URL | Interaction styles",
+        pntsnt: 2,
+      },
+
+      {
+        picture: Pdf,
+        title: "GOMS and the Keystroke-Level Model",
+        pntsnt: 2,
+      },
+      {
+        picture: Pdf,
+        title: "Standardize task sequences",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "Embed the link",
+        point: 0,
+      },
+      {
+        picture: Pdf,
+        title: "Use check boxes for binary choices",
+        point: 0,
+      },
+      {
+        picture: Discuss,
+        title: "DISCUSSION FORUM WEEK 3",
+        point: 0,
+      },
+      {
+        picture: Sound,
+        title: (
+          <div>
+            FEEDBACK OF WEEK 3
+            <br />
+            Please write clear and concise feedback to you instructor.
+            <br />
+            THis feedback will not be public, you can send your feedback a tany
+            time to the instructor without any hesitation!
+          </div>
+        ),
+        point: 0,
+      },
+    ],
+    week2Points: false,
   };
   render() {
     return (
@@ -897,7 +1019,7 @@ class MiddleContent extends Component {
         <WeekBoxs
           key="Week 3"
           title="Week 3"
-          allChecked={this.state.week3points}
+          allChecked={this.state.week3Points}
         >
           {this.state.week3.map((c, index) => (
             <Tickmarks
@@ -909,8 +1031,25 @@ class MiddleContent extends Component {
           ))}
         </WeekBoxs>
         {/*---------------------week 3 Activities--------------------- */}
-        <WeekBoxs
+        {/* <WeekBoxs
           key="Week 3 Activities"
+          title="Week 3 Activities"
+          allChecked={this.state.week3ActivitiesPoints}
+        >
+          {this.state.week3Activities.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() =>
+                this.addPoints(this.state.week3Activities, index, 30)
+              }
+            />
+          ))}
+        </WeekBoxs> */}
+        {/*---------------------week 3 Acti-------------------- */}
+        <WeekBoxs
+          key="Week 3 activities"
           title="Week 3 Activities"
           allChecked={this.state.week3ActivitiesPoints}
         >
@@ -1068,9 +1207,9 @@ class MiddleContent extends Component {
         break;
       case 30:
         if (state.length == sum) {
-          this.setState({ week3Activities: true });
+          this.setState({ week3ActivitiesPoints: true });
         } else {
-          this.setState({ week3Activities: false });
+          this.setState({ week3ActivitiesPoints: false });
         }
         break;
 
