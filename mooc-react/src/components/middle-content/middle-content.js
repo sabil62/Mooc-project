@@ -741,14 +741,14 @@ class MiddleContent extends Component {
       {
         picture: Sound,
         title: (
-          <div>
+          <span>
             FEEDBACK OF WEEK 3
             <br />
             Please write clear and concise feedback to you instructor.
             <br />
             THis feedback will not be public, you can send your feedback a tany
             time to the instructor without any hesitation!
-          </div>
+          </span>
         ),
         point: 0,
       },
@@ -756,126 +756,85 @@ class MiddleContent extends Component {
     week3ActivitiesPoints: false,
     week2: [
       {
-        picture: Video,
-        title: "Recognition vs. Recall in User Interfaces",
-        pntsnt: 2,
-      },
-      {
-        picture: Video,
-        title: "Material makes it possible",
-        pntsnt: 2,
-      },
-      {
-        picture: Video,
-        title: "Information Foraging",
-        pntsnt: 2,
-      },
-      {
-        picture: Video,
-        title: "Example: Seven Stages of Action by Don Norman",
-        pntsnt: 2,
+        picture: Main,
+        title: "Design Principles",
+        point: 0,
       },
 
       {
         picture: Video,
-        title: "Navigating the User UI Design to Follow",
-        pntsnt: 2,
-      },
-      {
-        picture: Video,
-        title: "I/0 Rules of Good UI Design to Follow",
-        pntsnt: 2,
-      },
-      {
-        picture: Video,
-        title: "Brain-Computer Interfaces Helping People with Disabilities",
-        pntsnt: 2,
+        title: "Human-Computer Interactoin (HCI)",
+        point: 0,
       },
 
+      {
+        picture: Video,
+        title: "Interaction Design Principles",
+        point: 0,
+      },
+      {
+        picture: Video,
+        title: "Design Principles: Visibility, Feedback, Mappings, Constraints",
+        point: 0,
+      },
       {
         picture: Video,
         title:
-          "Byron Yu: Brain Computer Interfaces Helping People with Disabilities",
-        pntsnt: 2,
+          "Good Design, Bad Desitn - The Best & Worst of Graphic Design in Games ",
+        point: 0,
       },
       {
-        picture: Video,
-        title: "Blind People can 'See' Facebook by Artificial Intelligence",
-        pntsnt: 2,
-      },
-
-      {
-        picture: Earth,
-        title: "8 Golden Rules for Better Interface Design",
-        pntsnt: 2,
-      },
-      {
-        picture: Earth,
-        title: "Use unique and descriptive headaings",
-        pntsnt: 2,
-      },
-      {
-        picture: Earth,
-        title: "Google Material Design Overview",
-        pntsnt: 2,
-      },
-      {
-        picture: Earth,
-        title: "Apple Human Interface Guideliness",
-        pntsnt: 2,
-      },
-      {
-        picture: Earth,
-        title: "Information scent",
-        pntsnt: 2,
+        picture: Quiz,
+        title: "Quiz | Week 2",
+        point: 0,
       },
       {
         picture: Document,
-        title: "URL | Interaction styles",
-        pntsnt: 2,
-      },
-
-      {
-        picture: Pdf,
-        title: "GOMS and the Keystroke-Level Model",
-        pntsnt: 2,
-      },
-      {
-        picture: Pdf,
-        title: "Standardize task sequences",
-        point: 0,
-      },
-      {
-        picture: Pdf,
-        title: "Embed the link",
-        point: 0,
-      },
-      {
-        picture: Pdf,
-        title: "Use check boxes for binary choices",
-        point: 0,
-      },
-      {
-        picture: Discuss,
-        title: "DISCUSSION FORUM WEEK 3",
-        point: 0,
-      },
-      {
-        picture: Sound,
-        title: (
-          <div>
-            FEEDBACK OF WEEK 3
-            <br />
-            Please write clear and concise feedback to you instructor.
-            <br />
-            THis feedback will not be public, you can send your feedback a tany
-            time to the instructor without any hesitation!
-          </div>
-        ),
+        title: "Additional Lesson",
         point: 0,
       },
     ],
     week2Points: false,
+    week2Activities: [
+      {
+        picture: Main,
+        title: "",
+        pnts: 2,
+      },
+
+      {
+        picture: Quiz,
+        title: "Tiger",
+        pnts: 2,
+      },
+
+      {
+        picture: Quiz,
+        title: "Interaction ",
+        pnts: 2,
+      },
+      {
+        picture: Quiz,
+        title: "Constraints",
+        pnts: 2,
+      },
+      {
+        picture: Quiz,
+        title: "Design Best ",
+        pnts: 2,
+      },
+      {
+        picture: Quiz,
+        title: "Weeks",
+        pnts: 2,
+      },
+      {
+        picture: Document,
+        title: "Quiz may",
+        pnts: 2,
+      },
+    ],
+    week2ActivitiesPoints: false,
   };
   render() {
     return (
@@ -1064,6 +1023,21 @@ class MiddleContent extends Component {
             />
           ))}
         </WeekBoxs>
+        {/*---------------------week 2--------------------- */}
+        <WeekBoxs
+          key="Week 2"
+          title="Week 2"
+          allChecked={this.state.week2Points}
+        >
+          {this.state.week2.map((c, index) => (
+            <Tickmarks
+              key={index}
+              title={c.title}
+              logo={c.picture}
+              addPoint={() => this.addPoints(this.state.week2, index, 2)}
+            />
+          ))}
+        </WeekBoxs>
 
         {/* {console.log(this.state.week7[0].point)}
         {console.log(this.state.week6[0].point)}
@@ -1122,6 +1096,9 @@ class MiddleContent extends Component {
         this.setState({ week3Activities: old });
         this.calculateTotalPoints(state, 30);
         break;
+      case 2:
+        this.setState({ week2: old });
+        this.calculateTotalPoints(state, 2);
 
       default:
         break;
@@ -1212,6 +1189,12 @@ class MiddleContent extends Component {
           this.setState({ week3ActivitiesPoints: false });
         }
         break;
+      case 2:
+        if (state.length == sum) {
+          this.setState({ week2Points: true });
+        } else {
+          this.setState({ week2Points: false });
+        }
 
       default:
         break;
