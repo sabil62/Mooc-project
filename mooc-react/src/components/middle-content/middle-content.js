@@ -836,46 +836,6 @@ class MiddleContent extends Component {
     ],
     week2ActivitiesPoints: false,
     week33ActivitiesPoints: false,
-    week23: [
-      {
-        picture: Main,
-        title: "Design Principles",
-        point: 0,
-      },
-
-      {
-        picture: Video,
-        title: "Human-Computer Interactoin (HCI)",
-        point: 0,
-      },
-
-      {
-        picture: Video,
-        title: "Interaction Design Principles",
-        point: 0,
-      },
-      {
-        picture: Video,
-        title: "Design Principles: Visibility, Feedback, Mappings, Constraints",
-        point: 0,
-      },
-      {
-        picture: Video,
-        title:
-          "Good Design, Bad Desitn - The Best & Worst of Graphic Design in Games ",
-        point: 0,
-      },
-      {
-        picture: Quiz,
-        title: "Quiz | Week 2",
-        point: 0,
-      },
-      {
-        picture: Document,
-        title: "Additional Lesson",
-        point: 0,
-      },
-    ],
   };
   render() {
     return (
