@@ -4,9 +4,9 @@ import "chartjs-plugin-streaming";
 
 import { Chart } from "chart.js";
 
-import ChartStreaming from "chartjs-plugin-streaming";
-import { StreamingPlugin } from "chartjs-plugin-streaming";
-Chart.register(ChartStreaming, StreamingPlugin);
+// import ChartStreaming from "chartjs-plugin-streaming";
+// import { StreamingPlugin } from "chartjs-plugin-streaming";
+// Chart.register(ChartStreaming, StreamingPlugin);
 
 const data = {
   datasets: [
